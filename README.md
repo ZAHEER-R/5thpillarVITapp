@@ -1,4 +1,7 @@
 # 5thpillarVITapp
+![1000060785](https://github.com/user-attachments/assets/282ff7f3-cca8-414a-b413-4b337ef84d96)
+![1000060787](https://github.com/user-attachments/assets/375da835-b121-493e-8b27-f04cc2ed2e5d)
+![1000060789](https://github.com/user-attachments/assets/1f8c5063-5050-4f94-acd8-8c808a0dc3fa)
 
 # README for 5th Pillar VIT Website
 
