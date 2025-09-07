@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Club Introduction – VIT 5th Pillar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#1e3a8a;
+      --secondary:#f3f4f6;
+      --text-dark:#1f2937;
+      --text-light:#ffffff;
+      --bg-gradient: linear-gradient(135deg, #1e3a8a, #2563eb);
+
+      --white:#fff; --gray-50:#F8FAFC; --gray-100:#F1F5F9; --gray-200:#E2E8F0; --gray-300:#CBD5E1;
+      --gray-400:#94A3B8; --gray-500:#64748B; --gray-600:#475569; --gray-700:#334155; --gray-800:#1E293B; --gray-900:#0F172A;
+
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+      --radius:12px; --radius-sm:8px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--secondary);color:var(--text-dark)}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+
+    /* Hero */
+    .section-hero{background:var(--bg-gradient);color:var(--text-light);padding:4rem 1rem;text-align:center}
+    .badge{display:inline-block;background:rgba(255,255,255,.9);color:var(--primary);padding:.4rem .8rem;border-radius:999px;font-weight:600;margin-bottom:1rem}
+    .section-hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800}
+    @media(min-width:768px){.section-hero h1{font-size:3.5rem}}
+
+    /* Navbar */
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-200)}
+    .navbar{position:fixed;top:0;left:0;width:100%;z-index:9999;background:#1e3a8a;border-bottom:1px solid var(--gray-200)}
+    .nav-bar{height:64px;display:flex;align-items:center;margin-left: 0%;}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;width:100%}
+
+    .brand{display:flex;align-items:center;gap:12px;padding-left:.25rem}
+    .brand .logo-img{display:inline-flex}
+    .brand .logo-img img{height:40px;width:auto;object-fit:contain;border-radius:6px}
+    .brand .txt{display:flex;flex-direction:column;line-height:1}
+    .brand .txt .vit{color:#fff;font-weight:800;font-size:18px}
+    .brand .txt .club{color:#e5ecff;font-size:12px}
+
+    .mobile-menu-btn{
+      display:none;position:relative;width:40px;height:34px;border:none;border-radius:8px;background:#0f2e75;
+      align-items:center;justify-content:center;cursor:pointer;margin-left:auto;margin-right:.5rem
+    }
+    .mobile-menu-btn span{position:absolute;width:22px;height:2px;background:#fff;transition:transform .25s ease, opacity .2s ease, top .25s ease}
+    .mobile-menu-btn span:nth-child(1){top:10px}
+    .mobile-menu-btn span:nth-child(2){top:16px}
+    .mobile-menu-btn span:nth-child(3){top:22px}
+
+    .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:10400;opacity:0;pointer-events:none;transition:opacity .2s ease}
+
+    .nav-menu{display:flex;align-items:center;gap:.25rem;margin-right:.5rem;}
+    .nav-item{
+      position:relative;display:flex;align-items:center;gap:.5rem;padding:.5rem .9rem;border-radius:8px;
+     ;color:#0f2e75;font-weight:600;cursor:pointer;transition:color .2s ease
+    }
+    /* White background always; text turns blue on hover/focus */
+    .nav-item:hover,.nav-item:focus-within{color:#1e3a8a;background:#fff}
+
+    .dropdown{position:relative}
+    .dropdown-label{display:inline-flex;align-items:center;gap:.5rem;background:transparent;border:0;color:inherit;cursor:pointer}
+    .dropdown-arrow{font-size:.75rem;transition:transform .25s ease,color .2s ease}
+
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--gray-200);
+      border-radius:10px;padding:6px 0;opacity:0;visibility:hidden;transform:translateY(6px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;box-shadow:var(--shadow-lg);z-index:10000
+    }
+    .dropdown-menu a{
+      display:block;padding:10px 14px;color:var(--gray-800);border-radius:8px;background:#fff;white-space:nowrap;transition:color .2s ease
+    }
+    .dropdown-menu a:hover,.dropdown-menu a:focus{color:#1e3a8a;background:#fff}
+    @media (hover:hover) and (pointer:fine){
+      .dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+      .dropdown:hover .dropdown-arrow,.dropdown:focus-within .dropdown-arrow{transform:rotate(180deg);color:#1e3a8a}
+    }
+
+    /* Mobile drawer with close X (X hidden on desktop) */
+    @media (max-width:1024px){
+      .mobile-menu-btn{display:inline-flex}
+      .nav-menu{
+        position:fixed;top:0;right:0;width:min(82vw,360px);max-width:100vw;height:100vh;padding:72px 12px 16px;background:#fff;
+        border-left:1px solid var(--gray-200);flex-direction:column;align-items:stretch;gap:.25rem;transform:translateX(100%);opacity:0;
+        overflow-y:auto;z-index:10500;transition:transform .3s ease, opacity .2s ease
+      }
+      body.nav-open .nav-menu{transform:translateX(0);opacity:1}
+      body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
+      body.nav-open .mobile-menu-btn span:nth-child(2){opacity:0}
+      body.nav-open .mobile-menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+      body.nav-open .mobile-menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+      .drawer-header{position:sticky;top:0;background:#fff;z-index:1;padding:8px 8px 0 8px}
+      .close-btn{
+        display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;border-radius:8px;background:#fff;
+        color:#0b1320;font-weight:700;font-size:20px;cursor:pointer;box-shadow:0 0 0 1px var(--gray-200)
+      }
+      .close-btn:hover{color:#1e3a8a}
+
+      /* Mobile dropdowns: click to open using .open */
+      .dropdown-menu{position:static;border:1px solid var(--gray-200);border-radius:10px;box-shadow:none;margin-top:6px;opacity:1;visibility:visible;transform:none;display:none}
+      .dropdown.open>.dropdown-menu{display:block}
+      .dropdown.open .dropdown-arrow{transform:rotate(180deg);color:#1e3a8a}
+    }
+
+    
+    @media (min-width:1025px){ .close-btn{display:none} }
+
+    body.lock-scroll{overflow:hidden;height:100%}
+    html,body{overflow-x:hidden;width:100%}
+    .navbar{width:100%}
+    main{padding-top:80px}
+
+    /* Cards/content */
+    .card{background:#fff;border-radius:.75rem;box-shadow:0 4px 12px rgba(0,0,0,.05);padding:1.5rem}
+    .card-title{font-size:1.25rem;font-weight:700;margin-bottom:1rem;color:#1e3a8a}
+    .card-content p{font-size:1rem;line-height:1.6;color:#374151}
+    .grid{display:grid;gap:1.5rem}
+    .grid-cols-2{grid-template-columns:repeat(2,1fr)}
+
+    /* Footer (keeps container and links classes with your styles) */
+    .footer{background:#0f172a;color:#cbd5e1;padding:3rem 0 1rem;margin-top:3rem}
+    .footer .links{display:flex;gap:1rem;justify-content:center;margin:1rem 0}
+    .fa-brands{font-size:1.8rem}
+
+    /* Your footer styles preserved */
+    .footer { background: var(--gray-800); color: white; padding: 3rem 0 1rem; }
+    .footer-content { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 2rem; }
+    .footer-brand .logo-text h3 { color: var(--primary); font-size: 1.125rem; margin: 0; }
+    .footer-brand .logo-text p { color: var(--gray-400); font-size: 0.75rem; margin: 0; }
+    .footer-brand p { color: var(--gray-400); margin-top: 1rem; }
+    .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-column h4 { color: white; font-size: 1rem; margin-bottom: 1rem; }
+    .footer-column a { display: block; color: var(--gray-400); margin-bottom: 0.5rem; transition: color 0.3s ease; }
+    .footer-column a:hover { color: var(--primary); }
+    .footer-column p { color: var(--gray-400); margin-bottom: 0.25rem; }
+/* Footer */
+.footer {
+    background: var(--gray-800);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+.footer-brand .logo-text h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.footer-brand .logo-text p {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.footer-brand p {
+    color: var(--gray-400);
+    margin-top: 1rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav-item{
+    text-decoration: none;
+    
+}
+.nav-menu{
+  width:100vw;
+  margin-right:-5%;
+  height:150vh;
+}
+.nav-item:hover{
+      border: 2px solid rgb(36, 128, 234);
+}
+a{
+    text-decoration: none;
+}
+.footer-column h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--gray-400);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary);
+}
+
+.footer-column p {
+    color: var(--gray-400);
+    margin-bottom: 0.25rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.875rem;
+}
+    @media(max-width:599px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media(max-width:640px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }    
+
+    .footer-bottom { border-top: 1px solid var(--gray-700); padding-top: 1rem; text-align: center; color: var(--gray-400); font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="container nav-bar">
+        <div class="nav-row">
+          <a  class="brand" aria-label="5th Pillar VIT">
+            <span class="logo-img"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" alt="5th Pillar VIT"></span>
+            <span class="txt"><span class="vit">VIT</span><span class="club">5th Pillar Club</span></span>
+          </a>
+
+          <button id="menuToggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div id="navMenu" class="nav-menu" aria-hidden="true">
+            <!-- Drawer header with close X (mobile/tablet only) -->
+            <div class="drawer-header">
+              <button id="menuClose" class="close-btn" aria-label="Close menu" title="Close">×</button>
+            </div>
+
+            <a href="index1.html" class="nav-item">Home</a>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-about">
+                <span>About Us</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-about" class="dropdown-menu" role="menu">
+                <a href="about/messages.html">Messages</a>
+                <a href="about/board.html">Board Members</a>
+                <a href="about/timeline.html">Timeline</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-events">
+                <span>Events</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-events" class="dropdown-menu" role="menu">
+                <a href="events/calendar.html">Event Calendar</a>
+                <a href="events/highlights.html">Event Highlights</a>
+                <a href="events/collaborative.html">Collaborative Events</a>
+                <a href="events/archived.html">Archived Events</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-committee">
+                <span>Committees</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-committee" class="dropdown-menu" role="menu">
+                <a href="committees/list.html">Committee List</a>
+                <a href="committees/activities.html">Committee Activities</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-blog">
+                <span>Blog</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-blog" class="dropdown-menu" role="menu">
+                <a href="blog/articles.html">Blog Articles</a>
+                <a href="blog/newsletter.html">Annual Newsletter</a>
+                <a href="blog/hackathon.html">Hackathon Outputs</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-collab">
+                <span>Collaborators</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-collab" class="dropdown-menu" role="menu">
+                <a href="collaborators/partners.html">Partner Profiles</a>
+                <a href="collaborators/speakers.html">Guest Speakers</a>
+                <a href="collaborators/partnership.html">Partnership Inquiry</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-gallery">
+                <span>Gallery</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-gallery" class="dropdown-menu" role="menu">
+                <a href="gallery/photos.html">Photo Albums</a>
+                <a href="gallery/videos.html">Videos</a>
+                <a href="gallery/moments.html">Moments</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-outreach">
+                <span>Outreach</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-outreach" class="dropdown-menu" role="menu">
+                <a href="outreach/projects.html">Projects</a>
+                <a href="outreach/alumni.html">Alumni Network</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-contact">
+                <span>Contact</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-contact" class="dropdown-menu" role="menu">
+                <a href="get-involved/register.html">Event Registration</a>
+                <a href="get-involved/register1.html">Join Our Club</a>
+                <a href="get-involved/feedback.html">Feedback</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-resources">
+                <span>Resources</span><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-resources" class="dropdown-menu" role="menu">
+                <a href="resources/legal.html">Legal Awareness</a>
+                <a href="resources/faq.html">FAQ</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-hero">
+      <div class="container">
+        <div class="badge">About Us</div>
+        <h1>Club Introduction</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="padding:2rem 1rem">
+        <div class="grid" style="gap:1.5rem">
+          <div class="card">
+            <div class="card-title">Our Mission</div>
+            <div class="card-content"><p>5th Pillar VIT is a socio-political NGO at VIT, dedicated to strengthening democracy through education, awareness, and civic engagement.</p></div>
+          </div>
+          <div class="card">
+            <div class="card-title">Our Vision</div>
+            <div class="card-content"><p>To cultivate an environment where individuals can challenge norms, express ideas, and build a transparent, democratic society.</p></div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="card">
+              <div class="card-title">Our Goals</div>
+              <div class="card-content"><p>Educate, promote civic engagement, and address societal issues for an informed and equitable society.</p></div>
+            </div>
+            <div class="card">
+              <div class="card-title">Our Motto</div>
+              <div class="card-content"><p>Encourage, enable, and empower every citizen to eliminate corruption at all levels.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon footerlogo" style="margin-left:3%"></div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom" style="text-align:center;color:#94A3B8">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+  <script>
+    (function(){
+      const body = document.body;
+      const menu = document.getElementById('navMenu');
+      const toggle = document.getElementById('menuToggle');
+      const backdrop = document.getElementById('navBackdrop');
+      const closeBtn = document.getElementById('menuClose');
+      const mq = window.matchMedia('(max-width: 1024px)');
+
+      function openNav(){
+        body.classList.add('nav-open','lock-scroll');
+        menu.setAttribute('aria-hidden','false');
+        toggle.setAttribute('aria-expanded','true');
+      }
+      function closeNav(){
+        body.classList.remove('nav-open','lock-scroll');
+        menu.setAttribute('aria-hidden','true');
+        toggle.setAttribute('aria-expanded','false');
+        // collapse all open dropdowns
+        menu.querySelectorAll('.dropdown.open').forEach(d=>{
+          d.classList.remove('open');
+          const btn=d.querySelector('.dropdown-label');
+          if(btn) btn.setAttribute('aria-expanded','false');
+        });
+      }
+      function toggleNav(){ body.classList.contains('nav-open') ? closeNav() : openNav(); }
+
+      toggle.addEventListener('click', (e)=>{ e.preventDefault(); toggleNav(); });
+      if (closeBtn) closeBtn.addEventListener('click', closeNav);
+      backdrop.addEventListener('click', closeNav);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && body.classList.contains('nav-open')) closeNav(); });
+
+      // Mobile dropdown: click to expand; desktop uses CSS hover
+      menu.querySelectorAll('.dropdown .dropdown-label').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          if(!mq.matches) return; // desktop handled by hover
+          e.preventDefault();
+          const dd = btn.closest('.dropdown');
+          const willOpen = !dd.classList.contains('open');
+          // close others
+          menu.querySelectorAll('.dropdown.open').forEach(d=>{
+            if(d!==dd){ d.classList.remove('open'); const b=d.querySelector('.dropdown-label'); if(b) b.setAttribute('aria-expanded','false'); }
+          });
+          dd.classList.toggle('open', willOpen);
+          btn.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      // Close drawer after selecting a link on mobile
+      menu.addEventListener('click', (e)=>{
+        const a = e.target.closest('a');
+        if(a && mq.matches) closeNav();
+      });
+
+      // Reset when resizing up to desktop
+      window.addEventListener('resize', ()=>{ if(!mq.matches) closeNav(); });
+    })();
+  </script>
+</body>
+</html>

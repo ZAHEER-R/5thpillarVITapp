@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Board Members – VIT 5th Pillar Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg">
+ <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+    :root{
+      --primary:#1e3a8a;
+      --white:#fff; --gray-50:#F8FAFC; --gray-100:#F1F5F9; --gray-200:#E2E8F0; --gray-300:#CBD5E1;
+      --gray-400:#94A3B8; --gray-500:#64748B; --gray-600:#475569; --gray-700:#334155; --gray-800:#1E293B; --gray-900:#0F172A;
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+      --radius:12px; --radius-sm:8px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--gray-800);background:#f7f9fc}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+
+    /* Header / Navbar */
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-200)}
+    .navbar{position:fixed;top:0;left:0;width:100%;z-index:9999;background:#1e3a8a;border-bottom:1px solid var(--gray-200)}
+    .bar{height:64px;display:flex;align-items:center}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;width:100%}
+
+    .brand{display:flex;align-items:center;gap:12px;padding-left:.5rem}
+    .brand .logo-img img{height:40px;width:auto;object-fit:contain;border-radius:6px}
+    .brand .brand-text{display:flex;flex-direction:column;line-height:1}
+    .brand .vit{font-weight:800;color:#fff;font-size:18px}
+    .brand .club{color:#e5ecff;font-size:12px}
+
+    .mobile-menu-btn{
+      display:none;position:relative;width:40px;height:34px;border:none;border-radius:8px;background:#0f2e75;
+      align-items:center;justify-content:center;cursor:pointer;margin-left:auto;margin-right:.5rem
+    }
+    .mobile-menu-btn span{position:absolute;width:22px;height:2px;background:#fff;transition:transform .25s ease, opacity .2s ease, top .25s ease}
+    .mobile-menu-btn span:nth-child(1){top:10px}
+    .mobile-menu-btn span:nth-child(2){top:16px}
+    .mobile-menu-btn span:nth-child(3){top:22px}
+
+    .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:10400;opacity:0;pointer-events:none;transition:opacity .2s ease}
+
+    .nav-menu{display:flex;align-items:center;gap:.25rem;margin-right:.5rem}
+    .nav-item{
+    align-items:center;gap:.5rem;padding:.5rem .9rem;border-radius:8px;
+      background:#ffffff;color:#023689;font-weight:600;cursor:pointer;transition:color .2s ease;
+    }
+    .nacv-item:hover{
+      background: #fff;
+    }
+    .nav-wrap
+    /* White bg always; only text turns blue */
+    .nav-item:hover,.nav-item:focus-within{color:var(--primary);background:#fff;margin-left: 5%;}
+
+    .dropdown{position:relative}
+    .dropdown-label{display:inline-flex;align-items:center;gap:.5rem;background:transparent;border:0;color:inherit;cursor:pointer}
+    .dropdown-arrow{font-size:.75rem;transition:transform .25s ease,color .2s ease}
+
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--gray-200);
+      border-radius:10px;padding:6px 0;opacity:0;visibility:hidden;transform:translateY(6px);
+      transition:opacity .2s ease, transform .2s ease, visibility .2s ease;box-shadow:var(--shadow-lg);z-index:10000
+    }
+    .dropdown-menu a{
+      display:block;padding:10px 14px;color:var(--gray-800);border-radius:8px;background:#fff;white-space:nowrap;transition:color .2s ease
+    }
+    .dropdown-menu a:hover,.dropdown-menu a:focus{color:var(--primary);background:#fff}
+    @media (hover:hover) and (pointer:fine){
+      .dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+      .dropdown:hover .dropdown-arrow,.dropdown:focus-within .dropdown-arrow{transform:rotate(180deg);color:var(--primary)}
+    }
+
+    /* Mobile drawer with close X (X hidden on desktop) */
+    @media (max-width:1024px){
+      .mobile-menu-btn{display:inline-flex}
+      .nav-menu{
+        position:fixed;top:0;right:0;width:min(82vw,360px);max-width:100vw;height:100vh;padding:72px 12px 16px;background:#ffffff;
+        border-left:1px solid var(--gray-200);flex-direction:column;align-items:stretch;gap:.25rem;transform:translateX(100%);opacity:0;
+        overflow-y:auto;z-index:10500;transition:transform .3s ease, opacity .2s ease
+      }
+      .nav-menu:hover{
+        background-color: #fff;
+        color:#0f2e75;
+      }
+      body.nav-open .nav-menu{transform:translateX(0);opacity:1}
+      body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
+      body.nav-open .mobile-menu-btn span:nth-child(2){opacity:0}
+      body.nav-open .mobile-menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+      body.nav-open .mobile-menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+      /* Drawer header with close X button (shown only mobile/tablet) */
+      .drawer-header{position:sticky;top:0;background:#fff;z-index:1;padding:8px 8px 0 8px}
+      .close-btn{
+        display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;border-radius:8px;background:#fff;
+        color:#0b1320;font-weight:700;font-size:20px;cursor:pointer;box-shadow:0 0 0 1px var(--gray-200)
+      }
+      .close-btn:hover{color:var(--primary)}
+
+      /* Mobile dropdowns: click-to-open via .open */
+      .dropdown-menu{position:static;border:1px solid var(--gray-200);border-radius:10px;box-shadow:none;margin-top:6px;opacity:1;visibility:visible;transform:none;display:none}
+      .dropdown.open>.dropdown-menu{display:block}
+      .dropdown.open .dropdown-arrow{transform:rotate(180deg);color:var(--primary)}
+    }
+    @media (min-width:1025px){
+      .close-btn{display:none} /* hide X on desktop */
+      .nav-item{
+    text-decoration: none;
+    color: #1e3a8a;
+}
+    }
+    .us{
+      margin-top: -15%;
+    }
+    body.lock-scroll{overflow:hidden;height:100%}
+    html,body{overflow-x:hidden;width:100%}
+    .navbar{width:100%}
+    main{padding-top:80px}
+
+    /* Page content */
+    .mainc{background:#a3c6ea;margin:10% 0}
+    @media (max-width:991px){ .mainc{ margin-top:15% } }
+    @media (max-width:599px){ .mainc{ margin-top:25% } }
+
+    .us{padding:clamp(1rem,2.5vw,3rem)}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(1rem,2vw,2rem)}
+    .card{background:#fff;border:1px solid #cfe0ff;border-radius:12px;box-shadow:var(--shadow-md);transition:transform .25s ease, box-shadow .25s ease;border-color:#b7ccff;padding:1rem}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.12);border-color:#1e3a8a}
+    
+
+    .details{margin-top:.75rem;display:grid;gap:.5rem}
+    .details .name,.details .position,.details .role{display:grid;gap:.25rem}
+
+    /* Footer (keep container, links classes) */
+    .footer{background:#0f172a;color:white;padding:3rem 0 1rem;margin-top:3rem}
+    .footer-content{display:grid;grid-template-columns:1fr 2fr;gap:3rem;margin-bottom:2rem}
+    @media(max-width:1024px){.footer-content{grid-template-columns:1fr}}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    @media(max-width:1024px){.footer-links{grid-template-columns:1fr}}
+    .footer-bottom{border-top:1px solid var(--gray-700);padding-top:1rem;text-align:center;color:var(--gray-400);font-size:.875rem}
+    .links{margin:5%;display:flex;flex-direction:row;justify-content:center;gap:10%}
+    .fa-brands{font-size:2.5rem}
+    .fa-brands:hover{ text-shadow:4px 4px 20px rgba(36,160,237,.814) }
+  .us{padding:clamp(1rem,2.5vw,3rem)}
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:clamp(1rem,2vw,2rem)
+  }
+  .card{background:#fff;border:1px solid #cfe0ff;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,.08);padding:1rem;transition:transform .2s ease, box-shadow .2s ease}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+
+  .card .image img{width:100%;height:auto;border-radius:50%;object-fit:cover;border:2px solid #0f2e75;box-shadow:2px 3px 10px rgb(50, 50, 50);padding:5%;}
+  .details{margin-top:.75rem;display:grid;gap:.5rem}
+    @media(min-width:640px){
+        .card{
+            transform: scale(0.8);
+        }
+     
+        .cards{
+            margin:5%;
+     
+        }
+        .us{
+        margin-top:10%;
+        }
+
+    }
+
+    @media(max-width:767px){
+        .card{
+            transform: scale(0.8);
+        }
+
+        .cards{
+            margin:5%;
+        }
+            .nav-item{
+          background:#fff;
+        }
+    }
+
+.nav-item{
+    text-decoration: none;
+    color:rgb(5, 49, 171);
+}
+.nav-menu{
+  width:105vw;
+  margin-right:-5%;
+  height:650vh;
+}
+.nav-item:hover{
+      border: 2px solid rgb(36, 128, 234);
+      
+}
+a{
+    text-decoration: none;
+}
+
+    @media(max-width:599px){
+        .card{
+            transform: scale(0.8);
+        }
+        .us{
+        margin-top:20%;
+        }
+        .cards{
+            margin:5%;
+        }
+                .nav-item{
+          background:#fff;
+        }
+    }
+    /* Footer */
+.footer {
+    background: var(--gray-800);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+.hero .container{
+  margin-top:10%;
+}
+.header{
+position: fixed !important;
+top: 0;
+left: 0;
+right: 0;
+z-index: 99999 !important;
+}
+
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-left:5%;
+}
+
+.footer-brand .logo-text h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.footer-brand .logo-text p {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.footer-brand p {
+    color: var(--gray-400);
+    margin-top: 1rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--gray-400);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary);
+}
+
+.footer-column p {
+    color: var(--gray-400);
+    margin-bottom: 0.25rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.875rem;
+}
+    @media(max-width:599px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    @media(max-width:640px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+        }
+        .nav-menu{
+  width:105vw;
+  margin-right:-5%;
+  height:500vh;
+
+}
+    }
+
+  .faq-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    font-family: Arial, sans-serif;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #f3f3f3;
+    border: none;
+    padding: 1em;
+    color:#1e3a8a;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1em;
+    font-size: 1em;
+    line-height: 1.4;
+    color: #232323;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 100vh; /* Adjust as needed for longer answers */
+    padding: 1em;
+}
+
+.icon {
+    flex-shrink: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .icon {
+    transform: rotate(45deg); /* Rotates + to x-like for close; adjust if using actual icons */
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <div class="container bar">
+        <div class="nav-row">
+          <a class="brand" aria-label="5th Pillar VIT">
+            <span class="logo-img"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" alt="5th Pillar VIT"></span>
+            <span class="brand-text"><span class="vit">VIT</span><span class="club">5th Pillar Club</span></span>
+          </a>
+
+          <button id="menuToggle" class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div id="navMenu" class="nav-menu" aria-hidden="true">
+            <!-- Drawer header with close X (mobile/tablet only) -->
+            <div class="drawer-header">
+              <button id="menuClose" class="close-btn" aria-label="Close menu" title="Close">×</button>
+            </div>
+
+            <a href="index1.html" class="nav-item"><div class="head">Home</div></a>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-about">
+                <div class="head">About Us</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-about" class="dropdown-menu" role="menu">
+                <a href="about/introduction.html">Club Introduction</a>
+                <a href="about/messages.html">Messages</a>
+                <a href="about/board.html">Board Members</a>
+                <a href="about/timeline.html">Timeline</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-events">
+                <div class="head">Events</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-events" class="dropdown-menu" role="menu">
+                <a href="events/calendar.html">Event Calendar</a>
+                <a href="events/highlights.html">Event Highlights</a>
+                <a href="events/collaborative.html">Collaborative Events</a>
+                <a href="events/archived.html">Archived Events</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-committee">
+                <div class="head">Committee</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-committee" class="dropdown-menu" role="menu">
+                <a href="committees/list.html">Committee List</a>
+                <a href="committees/activities.html">Committee Activities</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-blog">
+                <div class="head">Blog</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-blog" class="dropdown-menu" role="menu">
+                <a href="blog/articles.html">Blog Articles</a>
+                <a href="blog/newsletter.html">Annual Newsletter</a>
+                <a href="blog/hackathon.html">Hackathon Outputs</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-collab">
+                <div class="head">Collaborators</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-collab" class="dropdown-menu" role="menu">
+                <a href="collaborators/partners.html">Partner Profiles</a>
+                <a href="collaborators/speakers.html">Guest Speakers</a>
+                <a href="collaborators/partnership.html">Partnership Inquiry</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-gallery">
+                <div class="head">Gallery</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-gallery" class="dropdown-menu" role="menu">
+                <a href="gallery/photos.html">Photo Albums</a>
+                <a href="gallery/videos.html">Videos</a>
+                <a href="gallery/moments.html">Moments</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-outreach">
+                <div class="head">Outreach</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-outreach" class="dropdown-menu" role="menu">
+                <a href="outreach/projects.html">Projects</a>
+                <a href="outreach/alumni.html">Alumni Network</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-contact">
+                <div class="head">Contact</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-contact" class="dropdown-menu" role="menu">
+                <a href="get-involved/register.html">Event Registration</a>
+                <a href="get-involved/register1.html">Join Our Club</a>
+                <a href="get-involved/feedback.html">Feedback</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown">
+              <button class="dropdown-label" type="button" aria-expanded="false" aria-controls="dd-resources">
+                <div class="head">Resources</div><span class="dropdown-arrow">▼</span>
+              </button>
+              <div id="dd-resources" class="dropdown-menu" role="menu">
+                <a href="resources/legal.html">Legal Awareness</a>
+                <a href="resources/faq.html">FAQ</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+    </nav>
+  </header>
+<!-- Cards container -->
+<div class="us">
+    <strong>OUR TEAM 25</strong>
+  <div class="cards">
+    <!--Card 0-->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\j1.png" alt="Dr M.S. Jagadeesh Kumar"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Dr M.S. Jagadeesh Kumar</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Faculty Coordinator</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919952188371">
+          <div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">
+          9952188371</div></a></div>
+      </div>
+    </div>
+   <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+                We dedicate to empowering the youth,build awareness,foster ethical practices among students raising awareness,
+                and promoting a corruption-free society.
+</div>
+        </div>
+    </div>
+
+  </div>
+
+    <!-- Card 1 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Sarayavalasa Meghavini"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Sarayavalasa Meghavini 22BCI0188</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Chairperson</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919866455733"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9866455733</div></a></div>
+      </div>
+    </div>
+     <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+            
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 2 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Anushree Tyagi"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Anushree Tyagi 23BCB0108</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Vice Chairperson</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+918586960652"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">8586960652</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 3 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\kgt.jpg" alt="Kudurupaka Guna Teja"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Kudurupaka Guna Teja 23MIS0666</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Secretary</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+918341995157"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">8341995157</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+              As part of this mission, I aim to inspire responsibility, leadership, and integrity in every member.
+Together, we strive to build a nation founded on truth and justice.
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 4 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Mahika Goel"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Mahika Goel 23BCB0128</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Co-Secretary</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+918930101106"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">8930101106</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 5 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Nandhini Dhaka"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Nandhini Dhaka 23BCE0860</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Technical Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+917719971876"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">7719971876</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 6 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Divyanjali Tyagi"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Divyanjali Tyagi 23BCB0123</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Editorial Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919267950801"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9267950801</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 7 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\rohita.jpg" alt="Ravilla Rohitha"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Ravilla Rohitha 24MIS0070</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Outreach Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+916281854665"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">6281854665</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+              As Outreach Head of the 5th pillar Club, I aim to spread awareness, promote integrity, 
+              and encourage everyone to stand together against corruption.
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 8 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\bhuvaneswari.jpg" alt="Bhuvaneswari U"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Bhuvaneswari U 24MIS0041</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Events Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Number:</div><a href="tel:+919150153504"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9150153504</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+              As the Events Head of the 5th Pillar Anti-Corruption Club, I'm responsible for planning, organizing, 
+              and coordinating all our events and activities.
+              My role is to ensure every initiative runs smoothly and creates a meaningful impact in spreading awareness against corruption. 
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- Card 9 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\jahnavi.jpg" alt="Alapati Jahnavi"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Alapati Jahnavi 24MIS0139</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Finance Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919381969508"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9381969508</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+              As the Finance Head of the 5th Pillar Anti-Corruption Club, I take care of our finances ,
+               make sure everything is transparent, and help the team run smoothly in our fight against corruption .”
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- Card 10 -->
+
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\logo.jpg" alt="Shreya Sinha"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">Shreya Sinha 23MIS0244</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Position:</div><div style="font-weight:bolder;color:#313030">Design Head</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919113726596"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9113726596</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer"></div>
+        </div>
+    </div>
+  </div>
+
+
+    <!-- Card 11 -->
+    <div class="card"><div class="card-content">
+      <div class="image"><img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\zaheer.jpg" alt="R Zaheer"></div>
+      <div class="details">
+        <div class="name"><div style="font-weight:bolder;color:#cc0700">Name:</div><div style="font-weight:bolder;color:#313030">R Zaheer 24MIS0203</div></div>
+        <div class="position"><div style="font-weight:bolder;color:#0fb20c">Developer:</div><div style="font-weight:bolder;color:#313030">Technical</div></div>
+        <div class="role"><div style="font-weight:bolder;color:#0728ca">Phone:</div><a href="tel:+919177195797"><div style="font-weight:bolder;color:#fff;border:2px solid #205eef;padding:2px;background:#1e3a8a;border-radius:10px;display:flex;justify-content:center;">9177195797</div></a></div>
+      </div>
+    </div>
+       <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">Goal<span class="icon">+</span></button>
+            <div class="faq-answer">
+              My goal is to harness technology for impactful anti-corruption initiatives at 5th Pillar VIT,
+               aligning with our ethos of encouraging, enabling, and empowering citizens. By developing user-friendly digital tools
+                and leading innovation through hackathons,I aim to foster transparency, ethical practices,
+                 and civic engagement among VIT students, contributing to a sustainable, bribe-free India.
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  
+  </div>
+</div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon footerlogo" style="margin-left:3%"></div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom" style="text-align:center;margin-top:1rem;color:#94A3B8">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+
+  <script>
+
+    // Drawer + dropdown logic with mobile-only close X
+    (function(){
+      const body = document.body;
+      const menu = document.getElementById('navMenu');
+      const toggle = document.getElementById('menuToggle');
+      const closeBtn = document.getElementById('menuClose');
+      const backdrop = document.getElementById('navBackdrop') || (function(){const d=document.createElement('div');d.id='navBackdrop';d.className='nav-backdrop';d.setAttribute('aria-hidden','true');document.body.appendChild(d);return d})(); 
+      const mq = window.matchMedia('(max-width: 1024px)');
+
+      function openNav(){
+        body.classList.add('nav-open','lock-scroll');
+        menu.setAttribute('aria-hidden','false');
+        toggle.setAttribute('aria-expanded','true');
+      }
+      function closeNav(){
+        body.classList.remove('nav-open','lock-scroll');
+        menu.setAttribute('aria-hidden','true');
+        toggle.setAttribute('aria-expanded','false');
+        // collapse all mobile dropdowns
+        menu.querySelectorAll('.dropdown.open').forEach(d => {
+          d.classList.remove('open');
+          const btn = d.querySelector('.dropdown-label');
+          if (btn) btn.setAttribute('aria-expanded','false');
+        });
+      }
+      function toggleNav(){ body.classList.contains('nav-open') ? closeNav() : openNav(); }
+
+      toggle.addEventListener('click', (e)=>{ e.preventDefault(); toggleNav(); });
+      if(closeBtn) closeBtn.addEventListener('click', closeNav);
+      backdrop.addEventListener('click', closeNav);
+      document.addEventListener('keydown', (e)=>{ if (e.key==='Escape' && body.classList.contains('nav-open')) closeNav(); });
+
+      // Mobile dropdown tap to expand
+      menu.querySelectorAll('.dropdown .dropdown-label').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          if (!mq.matches) return; // desktop via hover
+          e.preventDefault();
+          const dd = btn.closest('.dropdown');
+          const willOpen = !dd.classList.contains('open');
+          // close others
+          menu.querySelectorAll('.dropdown.open').forEach(d=>{
+            if(d!==dd){ d.classList.remove('open'); const b=d.querySelector('.dropdown-label'); if(b) b.setAttribute('aria-expanded','false'); }
+          });
+          dd.classList.toggle('open', willOpen);
+          btn.setAttribute('aria-expanded', String(willOpen));
+        });
+      });
+
+      // Close on link click (mobile)
+      menu.addEventListener('click', (e)=>{
+        const a = e.target.closest('a');
+        if(a && mq.matches) closeNav();
+      });
+
+      // Reset on resize up to desktop
+      window.addEventListener('resize', ()=>{ if(!mq.matches) closeNav(); });
+    })();
+
+    //faq items dropdown
+       const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                if (isOpen) {
+                    item.classList.remove('open');
+                    question.querySelector('.icon').textContent = '+';
+                } else {
+                    item.classList.add('open');
+                    question.querySelector('.icon').textContent = '-';
+                }
+            });
+        });
+  </script>
+</body>
+</html>
