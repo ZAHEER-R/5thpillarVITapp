@@ -59,7 +59,7 @@ To test responsiveness:
 
 ## Contributing
 - This is a student project for 5th Pillar VIT. Contributions welcome for bug fixes, features, or design improvements.
-- Contact: Reach out via the website's contact form or email (e.g., zaheerrachakula@gmail.com).
+- Contact: Reach out via the website's contact form or email (e.g., fifthpillar2023@gmail.com).
 - Developers: Fork the repo, make changes, and submit a pull request.
 
 ## License
