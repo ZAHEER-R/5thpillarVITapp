@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5th Pillar VIT - Strengthening Democracy Through Education</title>
+  <meta name="description" content="5th Pillar VIT - Encouraging, enabling, and empowering every citizen of India to eliminate corruption through democratic engagement and civic awareness.">
+  <meta name="keywords" content="VIT, 5th Pillar, democracy, civic engagement, student organization, corruption, awareness">
+  <meta property="og:title" content="5th Pillar VIT - Strengthening Democracy">
+  <meta property="og:description" content="Student organization dedicated to strengthening democracy and eliminating corruption through education and civic engagement.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
+  <link rel="icon" type="image/png" href="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+ /* Overlay for modal effect */
+ 
+        .overlay {
+            filter:blur(100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 44, 44, 0.981);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Popup card */
+        .popup-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #aaa;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding-top:-12%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+        .button{
+            display: flex;
+            flex-direction: row;
+           justify-content: end;
+           margin-right: 3%;
+        }
+    /* Button Components */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Button Variants */
+.btn-hero {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-hero:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.btn-pillar {
+    background: var(--democracy-blue);
+    color: white;
+    box-shadow: var(--shadow-elegant);
+}
+
+.btn-pillar:hover {
+    background: var(--primary);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-accent {
+    background: var(--accent);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.btn-accent:hover {
+    background: #e55a2b;
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button Sizes */
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+/* Button Icons */
+.btn-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+    transform: translateX(2px);
+}
+
+/* Card Components */
+.card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: var(--gray-600);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* Form Components */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Navigation Components */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb-separator {
+    color: var(--gray-400);
+}
+
+.breadcrumb-item a {
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--primary-dark);
+}
+
+/* Alert Components */
+.alert {
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background: #E6F3FF;
+    border-color: var(--primary);
+    color: var(--primary-dark);
+}
+
+.alert-success {
+    background: #E6F7E6;
+    border-color: #22C55E;
+    color: #166534;
+}
+
+.alert-warning {
+    background: #FEF3E2;
+    border-color: #F59E0B;
+    color: #92400E;
+}
+
+.alert-error {
+    background: #FEE2E2;
+    border-color: #EF4444;
+    color: #991B1B;
+}
+
+/* Progress Components */
+.progress {
+    width: 100%;
+    height: 8px;
+    background: var(--gray-200);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* Tab Components */
+.tabs {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.tab-list {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    padding: 0.75rem 0;
+    background: none;
+    border: none;
+    color: var(--gray-600);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.tab-button:hover {
+    color: var(--primary);
+}
+
+.tab-content {
+    padding: 1rem 0;
+}
+
+/* Modal Components */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: white;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal {
+    transform: scale(1);
+}
+
+.modal-header {
+    padding: 1.5rem 1.5rem 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 0 1.5rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+/* Dropdown Components */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-toggle {
+    background: white;
+    border: 1px solid var(--gray-300);
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: '▼';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .dropdown-toggle::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown.open .dropdown-menu {
+    opacity: 100;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--gray-700);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background: var(--gray-100);
+}
+
+/* Loading Components */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--gray-200);
+    border-top: 2px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-dots {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.loading-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+/* Tooltip Components */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-content {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gray-900);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: var(--gray-900);
+}
+
+.tooltip:hover .tooltip-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+.grid { display: grid; }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-90 { opacity: 0.9; }
+/*style.css*/
+
+/*phoTo sliding*/
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .slider {
+      position: relative;
+      width: 30vw;
+      height:50vh;
+      max-width: 800px;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-left: 35%;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 30vw; /* 6 images */
+    }
+
+    .slides img {
+      width: 100%;
+      flex-shrink: 0;
+      transform:scale(0.8);
+    }
+
+    /* Navigation buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      font-size: 2rem;;
+      transform: translateY(-50%);
+      background: rgba(11, 88, 255, 0.6);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .prev:hover, .next:hover {
+      background: rgba(4, 209, 255, 0.8);
+    }
+
+/* Featured Events */
+.featured-events {
+    padding: 4rem 0;
+    background: var(--gray-50);
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.event-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elegant);
+}
+
+.event-image {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--gray-100);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.event-content {
+    padding: 1.5rem;
+}
+
+.event-content h3 {
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.event-content p {
+    color: var(--gray-600);
+    margin: 0;
+}
+
+/* CTA Section */
+.cta {
+    padding: 4rem 0;
+    background: var(--gradient-primary);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Footer */
+.footer {
+    background: var(--gray-800);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-left:0%;
+}
+
+.footer-brand .logo-text h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+.footer-brand .logo-text p {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.footer-brand p {
+    color: var(--gray-400);
+    margin-top: 1rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.footer-column a {
+    display: block;
+    color: var(--gray-400);
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--primary);
+}
+
+.footer-column p {
+    color: var(--gray-400);
+    margin-bottom: 0.25rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.875rem;
+}
+/* 1) Fix header strip causing overflow */
+.container1{
+  height: 15vh;
+  background-color: #007BFF;
+  width: 100%;           /* was 200vw */
+  margin-left: 0;        /* remove negative margins */
+  display: flex;
+  align-items: center;
+}
+
+/* 2) Guard rails for any stray horizontal overflow */
+html, body{
+  width: 100%;
+  overflow-x: hidden;     /* prevent horizontal scroll */
+}
+
+/* 3) Keep the right drawer within the viewport */
+@media (max-width:1024px){
+  .nav-menu{
+    position: fixed;
+    top: 0; right: 0;
+    width: min(82vw, 360px);
+    max-width: 100vw;     /* never exceed viewport */
+    height: 100vh;
+    padding: 72px 12px 16px;
+    background: #fff;
+    border-left: 1px solid var(--gray-200);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .25rem;
+    transform: translateX(100%);
+    opacity: 0;
+    overflow-y: auto;
+    z-index: 10500;
+    transition: transform .3s ease, opacity .2s ease;
+  }
+  .nav-menu > * { max-width: 100%; }  /* children cannot push width */
+}
+
+/* 4) Maintain scroll lock while drawer is open */
+body.lock-scroll{
+  overflow: hidden;  /* lock vertical and horizontal */
+  height: 100%;
+}
+
+/* 5) Optional: avoid using 100vw where a scrollbar exists */
+.navbar{ width: 100%; }   /* avoid 100vw which includes scrollbar width */
+
+    /* ===================== Core Variables (kept) ===================== */
+    :root {
+      --primary: #007BFF; --primary-dark: #0056B3; --primary-light: #CCE7FF;
+      --democracy-blue: #0066CC; --vit-gold: #FFB800; --accent: #FF6B35;
+      --white: #FFFFFF; --gray-50: #F8FAFC; --gray-100: #F1F5F9; --gray-200: #E2E8F0; --gray-300: #CBD5E1; --gray-400: #94A3B8;
+      --gray-500: #64748B; --gray-600: #475569; --gray-700: #334155; --gray-800: #1E293B; --gray-900: #0F172A;
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--democracy-blue));
+      --gradient-hero: linear-gradient(135deg, var(--primary) 0%, var(--democracy-blue) 50%, var(--vit-gold) 100%);
+      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04);
+      --shadow-elegant: 0 10px 30px -10px rgba(0, 123, 255, 0.2);
+      --shadow-glow: 0 0 40px rgba(0, 123, 255, 0.3);
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --container-max-width: 1200px;
+      --border-radius: 12px;
+      --border-radius-sm: 6px;
+      --border-radius-lg: 16px;
+    }
+
+    /* ===================== Base/Reset (kept) ===================== */
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;user-select:none;}
+    body{font-family:var(--font-body);line-height:1.6;color:var(--gray-800);background:var(--white)}
+    img{max-width:100%;height:auto;display:block}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:600;line-height:1.3;margin-bottom:.5em}
+    h1{font-size:3rem;font-weight:700}
+    h2{font-size:2.5rem}
+    h3{font-size:2rem}
+    h4{font-size:1.5rem}
+    p{margin-bottom:1rem}
+    a{text-decoration:none;color:inherit;transition:all .3s ease}
+
+    /* ===================== Utilities (kept) ===================== */
+    .container{max-width:var(--container-max-width);margin:0 auto;padding:0 1rem}
+    .event{max-width:var(--container-max-width);margin:0 auto;padding:0 1rem;display: grid;grid-template-columns: repeat(2,1fr);}
+    .section-header{text-align:center;margin-bottom:3rem}
+    .section-header h2{color:var(--primary);margin-bottom:1rem}
+    .section-header p{color:var(--gray-600);max-width:600px;margin:0 auto}
+    .section-footer{text-align:center;margin-top:3rem}
+
+    /* ===================== Header (kept + minor) ===================== */
+    .header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter: blur(10px);border-bottom:1px solid var(--gray-200)}
+    .navbar{position:fixed;top:0;left:0;width:100vw;z-index:9999;background:#007BFF;border-bottom:1px solid var(--gray-200);}
+    .container1{height:15vh;background-color:#007BFF;width:200vw;margin-left:-10%;}
+    .nav-row{display:flex;align-items:center;justify-content:space-between;height:64px}
+
+    /* ===================== Brand (original + FIXES) ===================== */
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    /* FIX: keep logo image reasonable and prevent overflow */
+    .brand .logo-img{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+    .brand .logo-img img{height:8vh;width:auto;object-fit:contain;display:block}
+
+    /* FIX: stack .vit and .club neatly and scale text safely */
+    .brand .brand-text{display:flex;flex-direction:column;line-height:1.1;gap:4px;min-width:0}
+    .brand .brand-text .vit{font-weight:800;color:#fff;
+      font-size: clamp(16px, 2.8vw, 24px);width:10vw;}
+    .brand .brand-text .club{color:#eef3ff;
+      font-size: clamp(11px, 2.2vw, 14px);margin-top:0;width:10vw;}
+
+    @media (min-width:1024px){
+     .brand .logo-img img{
+        z-index:4000;
+     }    
+     .container1{
+        margin-left:10%;
+     }
+    }
+
+    /* ===================== Nav menu + dropdowns ===================== */
+    .container1{
+      margin-left:0%;
+    }
+    .nav-menu{display:flex;align-items:center;gap:.25rem;overflow:visible}
+    .nav-item{position:relative;display:flex;align-items:center;gap:.5rem;padding:.5rem .9rem;
+      border-radius:8px;color:var(--gray-900);
+      font-weight:600;cursor:pointer;background-color: #007BFF;}
+    .nav-item:hover{background:var(--gray-100);color:var(--primary)}
+    .dropdown{position:relative;z-index:2}
+    .dropdown-label{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer}
+    .dropdown-arrow{font-size:.75rem;transition:transform .25s ease}
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;min-width:220px;background:#fff;border:1px solid var(--gray-200);
+      border-radius:10px;padding:6px 0;opacity:0;visibility:hidden;transform:translateY(6px);
+      transition:opacity .2s ease,transform .2s ease,visibility .2s ease;box-shadow:var(--shadow-lg);z-index:10000
+    }
+    .dropdown-menu a{display:block;padding:10px 14px;color:var(--gray-700);border-radius:8px;white-space:nowrap}
+    .dropdown-menu a:hover{background:var(--gray-100);color:var(--primary)}
+
+    @media (hover:hover) and (pointer:fine){
+      .dropdown:hover>.dropdown-menu,
+      .dropdown:focus-within>.dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+      .dropdown:hover .dropdown-arrow{transform:rotate(180deg)}
+    }
+
+    /* ===================== Mobile drawer + backdrop ===================== */
+    .mobile-menu-btn{
+      display:none;position:relative;width:50px;height:34px;border:none;border-radius:3px;background:#064db9;
+      align-items:center;justify-content:center;cursor:pointer;z-index:11000;margin-left: 70vw;
+    }
+    .mobile-menu-btn span{position:absolute;width:22px;height:2px;background:#fff;transition:transform .25s ease,opacity .2s ease,top .25s ease}
+    .mobile-menu-btn span:nth-child(1){top:10px}
+    .mobile-menu-btn span:nth-child(2){top:16px}
+    .mobile-menu-btn span:nth-child(3){top:22px}
+
+    .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:10400;opacity:0;pointer-events:none;transition:opacity .2s ease}
+
+    @media (max-width:1024px){
+
+      .mobile-menu-btn{display:inline-flex}
+      .nav-menu{
+        position:fixed;top:0;right:0;width:90vw;padding:72px 12px 16px;background:#fff;border-left:1px solid var(--gray-200);
+        display:flex;flex-direction:column;align-items:stretch;gap:.25rem;transform:translateX(100%);opacity:0;overflow-y:auto;z-index:10500;transition:transform .3s ease,opacity .2s ease
+      ;height:600vh;}
+      body.nav-open .nav-menu{transform:translateX(0);opacity:1}
+      body.nav-open .nav-backdrop{opacity:1;pointer-events:auto}
+      body.nav-open .mobile-menu-btn span:nth-child(2){opacity:0}
+      body.nav-open .mobile-menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+      body.nav-open .mobile-menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+      /* mobile dropdowns via .open */
+      .dropdown-menu{position:static;border:1px solid var(--gray-200);border-radius:10px;box-shadow:none;margin-top:6px;opacity:1;visibility:visible;transform:none;display:none}
+      .dropdown.open .dropdown-menu{display:block}
+    }
+    body.lock-scroll{overflow:hidden;height:100%}
+
+    /* ===================== Existing header strip look behind brand ===================== */
+    .container1{display:flex;align-items:center}
+
+    /* ===================== Content below header ===================== */
+    main{padding-top:64px}
+
+    /* ===================== Hero and sections (kept from user intent) ===================== */
+    .hero{position:relative;height:80vh;display:flex;align-items:center;justify-content:center;overflow:hidden;color:white;text-align:center}
+    .banner{z-index:-2;width:100vw;height:100vh;position:absolute;justify-content:center;left:0;top:0}
+    .banner img{width:100%;height:100%;object-fit:cover;filter:opacity(96%)}
+    .hero-content{position:relative;z-index:10;max-width:800px;margin:0 auto;MARGIN-TOP:-14%;}
+   .badge span{
+    background-color: #007bff7c;color:white;font-weight: bolder;padding:0.1%;border-radius:25%;font-size:1.5rem;display:none;
+   }
+    .hero-title{font-size:4rem;font-weight:700;margin-bottom:2rem;line-height:1.1}
+    .hero-divider{position:relative;margin:2rem 0}
+    .hero-divider span{font-weight:600;font-size:1.25rem;padding:0 1rem;background:rgba(255,255,255,0.08);backdrop-filter:blur(2px);border-radius:8px}
+    .hero-description{font-size:1.25rem;line-height:1.6;margin-bottom:2rem;opacity:.95}
+    .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.5rem;font-weight:600;border-radius:var(--border-radius-sm);transition:all .3s ease;cursor:pointer;border:none;text-decoration:none;font-size:.875rem;line-height:1}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-hero{background:var(--gradient-primary);color:white;box-shadow:var(--shadow-md)}
+    .btn-hero:hover{box-shadow:var(--shadow-glow);transform:translateY(-2px) scale(1.02)}
+    .btn-outline{background:transparent;color:white;border:2px solid rgba(255,255,255,.3)}
+    .btn-outline:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+    .btn-large{padding:1rem 2rem;font-size:1rem;min-width:200px}
+    .btn-small{padding:.5rem 1rem;font-size:.75rem}
+    .btn-icon{font-size:1rem;transition:transform .3s ease}
+    .btn:hover .btn-icon{transform:translateX(2px)}
+
+    /* Achievements (kept simplified) */
+    .achievements{padding:4rem 0;background:var(--gray-50)}
+    .achievements-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem}
+    .achievement-card{background:white;padding:2rem;border-radius:var(--border-radius);text-align:center;box-shadow:var(--shadow-md);transition:all .3s ease}
+    .achievement-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-elegant)}
+    .achievement-number{width:4rem;height:4rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.5rem;font-weight:bold;color:white}
+    .achievement-number.primary{background:var(--primary)}
+    .achievement-number.accent{background:var(--accent)}
+    .achievement-number.democracy{background:var(--democracy-blue)}
+    .achievement-number.gold{background:var(--vit-gold)}
+
+    /* About (kept simplified) */
+    .about{padding:4rem 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+    @media (max-width:1024px){.about-grid{grid-template-columns:1fr}}
+    .about-image{position:relative}
+    .image-backdrop{position:absolute;inset:0;background:var(--gradient-primary);border-radius:var(--border-radius-lg);transform:rotate(3deg)}
+    .about-image img{position:relative;z-index:10;border-radius:var(--border-radius-lg);box-shadow:var(--shadow-elegant)}
+    /* Featured events + slider */
+    .featured-events{padding:4rem 0;background:var(--gray-50)}
+    .events-grid{display:grid;grid-template-columns:1fr;gap:2rem}
+    .slider{position:relative;overflow:hidden;border-radius:10px;max-width:900px;margin:0 auto;box-shadow:var(--shadow-md)}
+    .slides{display:flex;transition:transform .4s ease}
+    .slides img{width:100%;flex:0 0 100%;object-fit:cover;height: clamp(200px, 42vw, 480px)}
+    .slider .prev,.slider .next{
+      position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:none;border-radius:999px;width:36px;height:36px;cursor:pointer
+    }
+    .slider .prev{left:10px}.slider .next{right:10px}
+
+    /* CTA */
+    .cta{padding:4rem 0;background:var(--gradient-primary);color:white;text-align:center}
+    .cta-content{max-width:600px;margin:0 auto}
+
+    /* Footer (kept) */
+    .footer{background:var(--gray-800);color:white;padding:3rem 0 1rem}
+    .footer-content{display:grid;margin-left:-4%;grid-template-columns:1fr 2fr;gap:3rem;margin-bottom:2rem}
+    @media(max-width:1024px){.footer-content{grid-template-columns:1fr}}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    @media(max-width:1024px){.footer-links{grid-template-columns:1fr}}
+    .footer-bottom{border-top:1px solid var(--gray-700);padding-top:1rem;text-align:center;color:var(--gray-400);font-size:.875rem}
+    .links{margin:5%;display:flex;flex-direction:row;justify-content:center;gap:10%}.fa-brands{font-size:2.5rem}
+
+
+@media (max-width: 768px) {
+    .mobile-menu-btn{
+margin-left: 65vw;
+    }
+
+      .slider{
+        height:30vh;
+        margin:20%;
+        transform: scale(2);
+        margin-left:35%;
+       
+      }
+ 
+     .slider .prev, .slider .next {
+        transform: scale(0.9);
+
+      }
+    .event{max-width:var(--container-max-width);margin:0 auto;padding:0 1rem;
+      display: grid;grid-template-columns: repeat(1,1fr);
+     transform: scale(0.9);
+    }
+
+}
+
+@media (min-width: 110px) {
+  .footer-content{
+    margin-left: 5%;
+  }
+} 
+@media (max-width: 599px) { 
+     .mobile-menu-btn{
+width:10vw;
+      }
+      .container1{
+        width:100vw;
+      }
+
+      .banner {
+      height:100vh;
+      }
+      .nav-menu{
+        position:fixed;top:0;right:0;width:90vw;padding:72px 12px 16px;background:#fff;border-left:1px solid var(--gray-200);
+        display:flex;flex-direction:column;align-items:stretch;gap:.25rem;transform:translateX(100%);opacity:0;overflow-y:auto;z-index:10500;transition:transform .3s ease,opacity .2s ease
+      ;height:800vh;}
+}
+@media (max-width: 640px) { 
+     .mobile-menu-btn{
+width:10vw;
+      }
+      .footer-links{
+        display:flex;
+        flex-direction:column;
+      }
+      .hero-content{
+        transform: scale(0.8);
+        width:150vw;
+      }
+      .slider{
+        height:30vh;
+        margin:20%;
+        transform: scale(2);
+        margin-left:35%;
+       
+      }
+      .brand-text .club,.brand-text .vit{
+        width:50vw;
+      }
+ 
+     .slider .prev, .slider .next {
+        transform: scale(0.9);
+
+      }
+      .container1{
+      width:60vw;
+    }
+    .event{max-width:var(--container-max-width);margin:0 auto;padding:0 1rem;
+      display: grid;grid-template-columns: repeat(1,1fr);
+    }
+
+    /* FIX: remove extreme transforms on brand that caused overlap */
+    .vit,.club{
+      margin-left:0;
+      transform:none;
+    }
+    .logo-img img{
+      transform:none;
+    }
+    .brand-text{
+      margin-left: 0;
+      margin-top: 0;
+    }
+}  
+/*optional*/
+/* Keep dropdown panels white with subtle border/shadow */
+.dropdown-menu{
+  background:#fff;                     /* always white */
+  border:1px solid var(--gray-200);
+  border-radius:10px;
+  box-shadow: var(--shadow-lg);
+  padding:6px 0;
+}
+
+/* Dropdown links: default dark text on white; hover only changes text color */
+.dropdown-menu a{
+  display:block;
+  padding:10px 14px;
+  color: var(--gray-800);              /* default text color */
+  background:#fff;                     /* stays white on hover/click */
+  border-radius:8px;
+  white-space:nowrap;
+  transition: color .2s ease;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus{
+  color: var(--primary);               /* blue text on hover/focus */
+  background:#fff;                     /* keep white bg */
+}
+
+/* Top-level nav items (headings): white chip look; hover only changes text color */
+.nav-item{
+  background:#fff;                     /* white bg always */
+  color:#0b1320;                       /* default text */
+  border-radius:8px;
+  padding:.5rem .9rem;                 /* ensure padding if overridden */
+  transition: color .2s ease;
+}
+.nav-item:hover,
+.nav-item:focus-within{
+  color: var(--primary);               /* blue text on hover/focus */
+  background:#fff;                     /* keep white bg */
+}
+
+/* Dropdown label button inherits text-only hover color change */
+.dropdown .dropdown-label{
+  background:transparent;
+  color:inherit;
+  border:0;
+  padding:0;
+}
+@media (hover:hover) and (pointer:fine){
+  .dropdown:hover .dropdown-arrow,
+  .dropdown:focus-within .dropdown-arrow{ color: var(--primary); } /* arrow turns blue */
+}
+
+/* Mobile drawer: same rule—white bg always, blue text on interaction */
+@media (max-width:1024px){
+  .nav-menu{ background:#fff; }
+
+  .nav-item{
+    background:#fff;
+    color:#0b1320;
+  }
+  .fa-arrow-left-long,.fa-arrow-right-long{
+    font-size: 0.8rem;
+  }
+  .nav-item:hover,
+  .nav-item:focus-within{
+    color: var(--primary);
+    background:#fff;                   /* keep white bg */
+  }
+
+  .dropdown-menu{
+    position:static;
+    display:none;                      /* shown when .dropdown.open */
+    margin-top:6px;
+    border:1px solid var(--gray-200);
+    border-radius:10px;
+    box-shadow:none;
+    background:#fff;                   /* stay white */
+  }
+  .dropdown.open > .dropdown-menu{ display:block }
+
+  .dropdown-menu a{
+    background:#fff;
+    color: var(--gray-800);
+  }
+  .dropdown-menu a:hover,
+  .dropdown-menu a:focus{
+    color: var(--primary);             /* blue text */
+    background:#fff;                   /* keep white bg */
+  }
+}
+/* Keyboard focus visibility without changing background */
+.dropdown-menu a:focus-visible,
+.nav-item:has(.dropdown-label):focus-within{
+  outline:2px solid var(--primary);
+  outline-offset:2px;
+}
+.nav-item{
+    text-decoration: none;
+   background-color: #007BFF;
+   
+}
+.nav-menu{
+  margin-left: 10%;
+}
+@media (min-width:1024px) and (max-width:1299px){
+  .nav-menu{
+  margin-left: 4%;
+}
+}
+
+  </style>
+</head>
+<body>
+    <!-- Popup Overlay -->
+     <div class="pop">
+    <div class="overlay" id="popupOverlay">
+        <div class="popup-card">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>5<sup>th</sup>Pillar VIT</h2>
+            <p>Download Our App </p>
+            <div class="buttons">
+        <a href="" download><button class="android" >Android</button></a>
+        <a href="" download><button class="ios">iOS</button></a>
+            </div>
+        </div>
+        </div>
+    </div>
+  <!-- Header / Navbar -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="container container1">
+        <div class="nav-row">
+          <!-- Brand: responsive logo + titles -->
+          <a href="index.html" class="brand" aria-label="5th Pillar VIT">
+            <span class="logo-img">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" alt="5th Pillar VIT">
+            </span>
+            <span class="brand-text">
+              <span class="vit">VIT</span>
+              <span class="club">5th Pillar Club</span>
+            </span>
+          </a>
+
+          <!-- Hamburger -->
+          <button id="menuToggle" class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <!-- Menu -->
+          <div id="navMenu" class="nav-menu" aria-hidden="true">
+            <a href="index.html" class="nav-item active home"><div class="head">Home</div></a>
+
+            <div class="nav-item dropdown about1">
+              <span class="dropdown-label"><div class="head">About Us</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="about/introduction.html">Club Introduction</a>
+                <a href="about/messages.html">Messages</a>
+                <a href="about/board.html">Board Members</a>
+                <a href="about/timeline.html">Timeline</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown events">
+              <span class="dropdown-label"><div class="head">Events</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="events/calendar.html">Event Calendar</a>
+                <a href="events/highlights.html">Event Highlights</a>
+                <a href="events/collaborative.html">Collaborative Events</a>
+                <a href="events/archived.html">Archived Events</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown commity">
+              <span class="dropdown-label"><div class="head">Committee</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="committees/list.html">Committee List</a>
+                <a href="committees/activities.html">Committee Activities</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown blog">
+              <span class="dropdown-label"><div class="head">Blog</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="blog/articles.html">Blog Articles</a>
+                <a href="blog/newsletter.html">Annual Newsletter</a>
+                <a href="blog/hackathon.html">Hackathon Outputs</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown collab">
+              <span class="dropdown-label"><div class="head">Collaborators</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="collaborators/partners.html">Partner Profiles</a>
+                <a href="collaborators/speakers.html">Guest Speakers</a>
+                <a href="collaborators/partnership.html">Partnership Inquiry</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown gallery">
+              <span class="dropdown-label"><div class="head">Gallery</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="gallery/photos.html">Photo Albums</a>
+                <a href="gallery/videos.html">Videos</a>
+                <a href="gallery/moments.html">Moments</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown outreach">
+              <span class="dropdown-label"><div class="head">Outreach</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="outreach/projects.html">Projects</a>
+                <a href="outreach/alumni.html">Alumni Network</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown involve">
+              <span class="dropdown-label"><div class="head">Contact</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="get-involved/register.html">Event Registration</a>
+                <a href="get-involved/register1.html">Join Our Club</a>
+                <a href="get-involved/feedback.html">Feedback</a>
+              </div>
+            </div>
+
+            <div class="nav-item dropdown resource">
+              <span class="dropdown-label"><div class="head">Resources</div><span class="dropdown-arrow">▼</span></span>
+              <div class="dropdown-menu">
+                <a href="resources/legal.html">Legal Awareness</a>
+                <a href="resources/faq.html">FAQ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Backdrop -->
+      <div id="navBackdrop" class="nav-backdrop" aria-hidden="true"></div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="banner">
+        <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\banner.jpg" alt="Hero Banner">
+      </div>
+      <div class="hero-content">
+        <div class="badge" style="margin-top:40%;"><span>NGO</span></div>
+        <h1 class="hero-title" style="margin-top:-15%;">5<sup>th</sup> Pillar VIT</h1>
+        <div class="hero-divider"><span>ANTI-CORRUPTION AND SOCIAL AWARENESS</span></div>
+        <p class="hero-description">
+          Encouraging, enabling, and empowering every citizen of India to eliminate corruption
+          on all levels of society through <strong>democratic engagement</strong> and <strong>civic awareness</strong>.
+        </p>
+        <div class="hero-buttons">
+          <a href="get-involved/feedback.html" class="btn btn-hero btn-large">Connect Us <span class="btn-icon">→</span></a>
+          <a href="resources/faq.html" class="btn btn-outline btn-large learnmore">Learn More <span class="btn-icon">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements">
+      <div class="container">
+        <div class="section-header">
+          <h2>Tenure Highlights</h2>
+          <p>A year of remarkable achievements, groundbreaking events, and meaningful collaborations that strengthened democracy and civic engagement.</p>
+        </div>
+        <div class="achievements-grid">
+          <div class="achievement-card"><div class="achievement-number primary">75</div><p>Events Conducted</p></div>
+          <div class="achievement-card"><div class="achievement-number accent">7</div><p>Collaborations</p></div>
+          <div class="achievement-card"><div class="achievement-number democracy">25+</div><p>Articles Published</p></div>
+          <div class="achievement-card"><div class="achievement-number gold">81</div><p>Course Students</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-content">
+            <div class="badge">🚀<br>Our Mission</div>
+            <h2>Building Democracy Through Education</h2>
+            <p>As a socio-political NGO at VIT, we focus on strengthening democracy by creating awareness about social responsibilities and laws that protect us. Our mission is to cultivate an environment where individuals can openly challenge societal norms and express their ideas holistically.</p>
+            <div class="goals-grid">
+              <div class="goal-card"><div class="goal-icon">🎯</div><h3>Our Goals</h3><p>Educate, promote civic engagement, and tackle societal issues for an informed society.</p></div>
+              <div class="goal-card"><div class="goal-icon">🏆</div><h3>Our Motto</h3><p>Encourage, enable, and empower every citizen to eliminate corruption at all levels.</p></div>
+            </div>
+            <a href="about/introduction.html" class="btn btn-pillar btn-large">Explore Our Story <span class="btn-icon">→</span></a>
+          </div>
+          <div class="about-image">
+            <div class="image-backdrop"></div>
+            <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\welcome.png" alt="Club Overview">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Highlights -->
+    <section class="featured-events">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Photos</h2>
+          <p>Discover our Gallery</p>
+        </div>
+        <div class="events-grid">
+          <div class="slider">
+            <div class="slides">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\gravitas23.png" alt="Slide 1">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community1.png" alt="Slide 2">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community2.png" alt="Slide 3">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community3.png" alt="Slide 4">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community4.png" alt="Slide 5">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\ppi.png" alt="Slide 6">
+            </div>
+            <button class="prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+        </div>
+        <div class="section-footer"></div>
+      </div>
+      <br><br>
+      <div class="hero-buttons">
+        <a href="Gallery\photos.html" class="btn btn-hero btn-small viewmore">View More <span class="btn-icon">→</span></a>
+      </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+      <div class="container event">
+        <div class="section-header">
+          <h2>Featured Events</h2>
+          <p>Discover our impactful events that bring together students, faculty, and communities to drive positive change and democratic engagement.</p>
+        </div>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-image">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\ecovision.png" alt="EcoVision Hack">
+              <div class="event-badge">Gravitas 2023</div>
+            </div>
+            <div class="event-content">
+              <h3>EcoVision Hack</h3><p>Two-day hackathon focused on UN Sustainable Development Goals</p>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\mootcourt.png" alt="Moot Court">
+              <div class="event-badge">Riviera 2023</div>
+            </div>
+            <div class="event-content">
+              <h3>Moot Court</h3><p>Mock representation of Indian Supreme Court with legal proceedings</p>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-image">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\fairsoffreedom.png" alt="Fairs of Freedom">
+              <div class="event-badge">Riviera 2023</div>
+            </div>
+            <div class="event-content">
+              <h3>Fairs of Freedom</h3><p>Electoral simulation with democratic processes and governance</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Make a Difference?</h2>
+          <p>Join 5th Pillar VIT and be part of a community dedicated to strengthening democracy, promoting transparency, and creating positive societal change.</p>
+          <div class="cta-buttons">
+            <a href="get-involved/register1.html" class="btn btn-accent btn-large"><span class="btn-icon"></span>Join Us</a>
+            <a href="get-involved/feedback.html" class="btn btn-outline btn-large"><span class="btn-icon">↗</span>Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon footerlogo" style="margin-left:3%"></div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+      <div class="links">
+        <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.</p>
+      </div>
+
+      <!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+    </div>
+  </footer>
+
+
+  <script>
+
+    /*
+            // Function to show popup
+        function showPopup() {
+            document.getElementById('popupOverlay').style.display = 'flex';
+        }
+
+        // Function to close popup
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+           
+        }
+
+        // Show popup on page load
+        window.onload = showPopup;
+
+        // Close on X button click
+        document.getElementById('closeBtn').addEventListener('click', closePopup);
+    */
+
+    // Drawer + dropdown logic
+    (function(){
+      const body = document.body;
+      const menu = document.getElementById('navMenu');
+      const toggle = document.getElementById('menuToggle');
+      const backdrop = document.getElementById('navBackdrop');
+      const mq = window.matchMedia('(max-width: 1024px)');
+
+      function openNav(){ body.classList.add('nav-open','lock-scroll'); menu.setAttribute('aria-hidden','false'); }
+      function closeNav(){ body.classList.remove('nav-open','lock-scroll'); menu.setAttribute('aria-hidden','true'); document.querySelectorAll('.dropdown.open').forEach(d=>d.classList.remove('open')); }
+      function toggleNav(){ body.classList.contains('nav-open') ? closeNav() : openNav(); }
+
+      toggle.addEventListener('click', (e)=>{ e.preventDefault(); toggleNav(); });
+      backdrop.addEventListener('click', closeNav);
+      document.addEventListener('keydown', (e)=>{ if (e.key==='Escape' && body.classList.contains('nav-open')) closeNav(); });
+
+      // close on link tap (mobile)
+      menu.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (a && mq.matches) closeNav();
+      });
+
+      // mobile dropdown tap
+      menu.querySelectorAll('.dropdown .dropdown-label').forEach(lbl=>{
+        lbl.addEventListener('click', (e)=>{
+          if (!mq.matches) return; // desktop uses hover
+          e.preventDefault();
+          const dd = e.currentTarget.closest('.dropdown');
+          const wasOpen = dd.classList.contains('open');
+          document.querySelectorAll('.dropdown.open').forEach(d=>d.classList.remove('open'));
+          if (!wasOpen) dd.classList.add('open');
+        });
+      });
+
+      // reset on resize up
+      window.addEventListener('resize', ()=>{ if (!mq.matches) closeNav(); });
+    })();
+
+    // Simple slider
+    (function(){
+      const slides = document.querySelector('.slides');
+      if (!slides) return;
+      const totalSlides = document.querySelectorAll('.slides img').length;
+      let index = 0;
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
+
+      function updateSlider(){ slides.style.transform = 'translateX(-' + (index * 100) + '%)'; }
+      next && next.addEventListener('click', ()=>{ index = (index + 1) % totalSlides; updateSlider(); });
+      prev && prev.addEventListener('click', ()=>{ index = (index - 1 + totalSlides) % totalSlides; updateSlider(); });
+      setInterval(()=>{ index = (index + 1) % totalSlides; updateSlider(); }, 4000);
+    })();
+  </script>
+</body>
+</html>

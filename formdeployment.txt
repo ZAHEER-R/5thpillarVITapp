@@ -1,0 +1,75 @@
+    <script>
+        const form = document.getElementById('inquiryForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let isValid = true;
+            const requiredFields = form.querySelectorAll('[required]');
+
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    alert(`Please fill in the required field: ${field.name || field.id}`);
+                }
+            });
+
+            if (isValid) {
+                // Proceed with Google Sheets submission
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby6tvS5Wtqw_ggM5siwZu2YXXjC_mHrNICVysrEFuCkplnqG1RNKBTrpWbR-OQ3h3_BmQ/exec';
+                const formData = new FormData(form);
+
+                fetch(scriptURL, { method: "POST", body: formData })
+                    .then((response) => {
+                        Swal.fire("Done", "Submitted Successfully.", "success");
+                        form.reset();
+                    })
+                    .catch((error) => {
+                        Swal.fire("Error", "Something went wrong. please try again!", "error");
+                    });
+            }
+        });
+    </script>
+------------------------------------------------------------------
+var sheetName = 'Sheet1'
+var scriptProp = PropertiesService.getScriptProperties()
+
+function intialSetup () {
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  scriptProp.setProperty('key', activeSpreadsheet.getId())
+}
+
+function doPost (e) {
+  var lock = LockService.getScriptLock()
+  lock.tryLock(10000)
+
+  try {
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+    var sheet = doc.getSheetByName(sheetName)
+
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    var nextRow = sheet.getLastRow() + 1
+
+    var newRow = headers.map(function(header) {
+      return header === 'timestamp' ? new Date() : e.parameter[header]
+    })
+
+    sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  catch (e) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': e }))
+      .setMimeType(ContentService.MimeType.JSON)
+  }
+
+  finally {
+    lock.releaseLock()
+  }
+}
+
+
+//https://script.google.com/macros/s/AKfycbzD6u1CsFlUfup1Q9RjPfhCgjpVVubZ5l4CTLIf8SAz5kHTXp3Y7zQMCpt4-orvt2_R/exec

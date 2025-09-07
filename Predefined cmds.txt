@@ -1,0 +1,1650 @@
+board
+
+General
+
+who are you ?
+I am Jarvis ai assistant created by 2025-26 Developer and board of 5pillar Club VIT Vellore
+what you will do?
+I am here you to help you , Chatbot assistant for this app feel free to ask anything regarding our club !
+
+Q: What is the 5th Pillar VIT Club?
+A: 5th Pillar VIT is a student club at Vellore Institute of Technology focused on anti-corruption awareness, youth empowerment, ethical practice and civic engagement. Its tagline: “Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+Q: Where is the club based?
+A: Vellore Institute of Technology (VIT), Vellore, Tamil Nadu 632014, India (see footer contact info).
+
+Mission & Activities
+
+Q: What does the club do?
+A: The club runs awareness campaigns, workshops, guest lectures, hackathons (and publishes hackathon outputs), outreach projects, collaborative events, and media (photo albums and videos). It promotes transparency, ethics, leadership, and civic responsibility among students.
+
+Q: What are some signature activities I can expect?
+A: Event calendar entries, event highlights, collaborative events with partners, hackathons, outreach projects, guest speaker sessions and an annual newsletter.
+
+Team & Leadership
+
+Q: Who leads the club?
+A: The Faculty Coordinator is Dr M.S. Jagadeesh Kumar. The student leadership team includes Chairperson, Vice Chairperson, Secretary, Heads for Outreach, Events, Finance, Design, Editorial, Technical, and a Developer for technical work.
+
+Q: Full team directory (name — student ID — role — phone):
+
+Dr M.S. Jagadeesh Kumar — Faculty Coordinator — 9952188371 (+91 99521 88371)
+
+Sarayavalasa Meghavini — 22BCI0188 — Chairperson — 9866455733 (+91 98664 55733)
+
+Anushree Tyagi — 23BCB0108 — Vice Chairperson — 8586960652 (+91 85869 60652)
+
+Kudurupaka Guna Teja — 23MIS0666 — Secretary — 8341995157 (+91 83419 95157)
+
+Mahika Goel — 23BCB0128 — Co-Secretary — 8930101106 (+91 89301 01106)
+
+Nandhini Dhaka — 23BCE0860 — Technical Head — 7719971876 (+91 77199 71876)
+
+Divyanjali Tyagi — 23BCB0123 — Editorial Head — 9267950801 (+91 92679 50801)
+
+Ravilla Rohitha — 24MIS0070 — Outreach Head — 6281854665 (+91 62818 54665)
+
+Bhuvaneswari U — 24MIS0041 — Events Head — 9150153504 (+91 91501 53504)
+
+Alapati Jahnavi — 24MIS0139 — Finance Head — 9381969508 (+91 93819 69508)
+
+Shreya Sinha — 23MIS0244 — Design Head — 9113726596 (+91 91137 26596)
+
+R Zaheer — 24MIS0203 — Developer (Technical) — 9177195797 (+91 91771 95797)
+
+Member goals & statements (text shown on respective profile cards)
+
+Q: What are the personal goals / mission statements shown on member cards?
+A: The cards include short “Goal” entries for some members. Exact content present on the page:
+
+Dr M.S. Jagadeesh Kumar (Faculty Coordinator): “We dedicate to empowering the youth, build awareness, foster ethical practices among students, raising awareness, and promoting a corruption-free society.”
+
+Kudurupaka Guna Teja (Secretary): “As part of this mission, I aim to inspire responsibility, leadership, and integrity in every member. Together, we strive to build a nation founded on truth and justice.”
+
+Ravilla Rohitha (Outreach Head): “As Outreach Head … I aim to spread awareness, promote integrity, and encourage everyone to stand together against corruption.”
+
+Bhuvaneswari U (Events Head): “As the Events Head … I’m responsible for planning, organizing, and coordinating all our events and activities. My role is to ensure every initiative runs smoothly and creates a meaningful impact in spreading awareness against corruption.”
+
+Alapati Jahnavi (Finance Head): “As the Finance Head … I take care of our finances, make sure everything is transparent, and help the team run smoothly in our fight against corruption.”
+
+R Zaheer (Developer): “My goal is to harness technology for impactful anti-corruption initiatives at 5th Pillar VIT … By developing user-friendly digital tools and leading innovation through hackathons, I aim to foster transparency, ethical practices, and civic engagement among VIT students, contributing to a sustainable, bribe-free India.”
+
+Note: Several profile cards have an empty Goal field — those members have no goal text on the page.
+
+Joining, participation & volunteering
+
+Q: How can I join the club?
+A: Use the Join Club page: get-involved/register1.html. Membership is open to VIT students committed to the club’s mission.
+
+Q: How do I register for events?
+A: Event registration form is at get-involved/register.html. Also check the Event Calendar at events/calendar.html for upcoming event details.
+
+Q: I’m not a member — can I still participate?
+A: Most events are open to VIT students; some events may invite external collaborators, guest speakers, or alumni. Check the event listing for participation details.
+
+Q: How can alumni get involved?
+A: See the Alumni Network page at outreach/alumni.html and use partnership/contact pages to coordinate involvement.
+
+------------------------------------------------------------------------
+introduction
+
+General / Identity
+
+Q: What is 5th Pillar VIT?
+A: 5th Pillar VIT is a student club at Vellore Institute of Technology. The site describes it as a socio-political NGO at VIT dedicated to strengthening democracy through education, awareness, and civic engagement. The footer labels it “5th Pillar VIT — Students's Club” and includes the tagline: “Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+Q: Where is the club based?
+A: Vellore Institute of Technology (VIT), Vellore, Tamil Nadu 632014, India (shown in the footer contact info).
+
+Mission, Vision, Goals & Motto
+
+Q: What is the club’s mission?
+A: The mission text on the page states: “5th Pillar VIT is a socio-political NGO at VIT, dedicated to strengthening democracy through education, awareness, and civic engagement.”
+
+Q: What is the club’s vision?
+A: “To cultivate an environment where individuals can challenge norms, express ideas, and build a transparent, democratic society.”
+
+Q: What are the club’s goals?
+A: “Educate, promote civic engagement, and address societal issues for an informed and equitable society.”
+
+Q: What is the club’s motto?
+A: “Encourage, enable, and empower every citizen to eliminate corruption at all levels.”
+
+--------------------------------------------------------------------------
+messages
+
+1. Who is the Faculty Coordinator of 5th Pillar VIT?
+
+The Faculty Coordinator is Dr. M. S. Jagadeesh Kumar, who guides and mentors the club in its mission to strengthen democracy and create a more ethical and just society.
+
+2. What is the core mission of the 5th Pillar Club at VIT?
+
+The mission is to encourage, enable, and empower every citizen to eliminate corruption, strengthen democracy, and promote social responsibility through awareness programs and knowledge-sharing.
+
+3. How does the club promote democratic values?
+
+The club emphasizes that small acts, such as following traffic rules and helping others navigate bribe-free processes, can strengthen democracy. It also promotes transparency and accountability through tools like the Right to Information (RTI).
+
+4. What role does the Right to Information (RTI) play in the club’s activities?
+
+The RTI is seen as a powerful tool for ensuring accountability and transparency in society. The club encourages students to use RTI to fight corruption and uphold justice.
+
+5. How does the club impact its members and alumni?
+
+Members gain awareness, confidence, and the ability to express opinions without fear. Many alumni have gone on to achieve remarkable heights while carrying forward the values nurtured by the club.
+
+6. What insights does the Editorial Head share in the Editor’s Note?
+
+Divyanjali Tyagi (Editorial Head, 2025–26) reflects that the mission of 5th Pillar immediately resonated with her during her early days at VIT. She highlights how the club fosters a safe space to express opinions, challenge norms, and cultivate awareness, empathy, and confidence.
+
+7. What is one of the greatest strengths of the 5th Pillar Club according to the Editor’s Note?
+
+The club’s greatest strength is its shared mindset of confidence, where members can express their ideas thoughtfully and holistically without fear of judgment.
+
+8. What message does the Office of Student’s Welfare convey about the club?
+
+The Office of Student’s Welfare emphasizes that the club prepares the next generation to be dutiful, environment-conscious, and corruption-free citizens. It encourages engagement with peers who share anti-corruption and social development interests.
+
+9. What is the ultimate objective of the club according to the Office of Student’s Welfare?
+
+The objective is to strengthen democracy, empower citizens with knowledge, and support fellow Indians in living a bribe-free life by sharing correct procedures and information.
+
+----------------------------------------------------------------------
+timeline
+
+1. What is the purpose of the “Timeline & Milestones” page?
+
+The page highlights the journey, growth, and impact of the 5th Pillar VIT Club by showcasing achievements across different years.
+
+2. What milestone was achieved in the academic year 2025–26?
+
+In 2025–26, the club successfully conducted Quanta25, one of its latest major events.
+
+3. Why is 2023–24 described as a “Record Breaking Year”?
+
+Because during 2023–24, the club achieved several key milestones:
+
+Conducted 75 events in one tenure.
+
+Migrated the blog from WordPress to Medium, publishing over 200+ articles.
+
+Added 25+ new articles.
+
+Instituted the yearly Newsletter.
+
+Started the “Law and You” awareness series.
+
+4. What were the major milestones of 2022–23?
+
+In 2022–23, the club laid strong foundations and expanded through:
+
+Running an Extra-Curricular Course attended by 28 students.
+
+Establishing four internal committees.
+
+Collaborating with seven esteemed organizations.
+
+Initiating major outreach programs.
+
+5. How does the navigation menu on this page help visitors?
+
+The navigation includes quick access to Home, About Us, Events, Committees, Blog, Collaborators, Gallery, Outreach, Contact, and Resources, with dropdowns for sub-sections like messages, newsletters, hackathons, alumni, and FAQs.
+
+6. What does the Hero section of this page emphasize?
+
+It introduces the Timeline & Milestones with the tagline:
+“Our journey of growth, impact, and achievements over the years.”
+
+7. What footer information is provided on this page?
+
+The footer includes:
+
+Quick Links (About Us, Events, Committees, Blog).
+
+Get Involved options (Join Club, Event Registration, Feedback).
+
+Contact Info (VIT, Vellore, Tamil Nadu, India).
+
+Social Media links (Instagram, Facebook, LinkedIn).
+
+A copyright notice: “© 2025 5th Pillar VIT. All rights reserved.”
+
+8. How does the club describe its mission in the footer?
+
+The mission is to encourage, enable, and empower every citizen of India to eliminate corruption on all levels of society.
+--------------------------------------------------------------
+
+articles
+1. What is the purpose of the “Partner Profiles” page?
+
+The page introduces the collaborators and guest partners of 5th Pillar VIT, showing their contributions to the club’s mission and activities.
+
+2. What does the Hero section highlight?
+
+The Hero section emphasizes “Collaborators & Guests” with the main heading Partner Profiles, signifying the importance of partnerships for the club.
+
+3. Where can I find the 5th Pillar VIT article blog?
+
+The article blog has been shifted to Medium.
+👉 Access it here: 5th Pillar Medium Blog
+.
+
+4. What type of content is available on the article blog?
+
+The blog contains student-written articles, newsletters, and thought pieces on democracy, transparency, social responsibility, and anti-corruption initiatives.
+
+5. How is the navigation menu structured on this page?
+
+The menu provides quick access to:
+
+Home
+
+About Us (Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Highlights, Collaborative, Archived)
+
+Committees (List, Activities)
+
+Blog (Newsletter, Hackathon Outputs)
+
+Collaborators (Partner Profiles, Guest Speakers, Partnership Inquiry)
+
+Gallery (Photos, Videos, Moments)
+
+Outreach (Projects, Alumni Network)
+
+Contact (Event Registration, Join Club, Feedback)
+
+Resources (Legal Awareness, FAQ)
+
+6. Who are considered collaborators and guests of 5th Pillar VIT?
+
+They include partner organizations, guest speakers, and contributors who support events, projects, and outreach activities of the club.
+
+7. How does the footer describe the club’s mission?
+
+It states:
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+8. What quick links are available in the footer?
+
+About Us
+
+Events
+
+Committees
+
+Blog
+
+9. How can I get involved with the club?
+
+You can:
+
+Join the Club through registration.
+
+Register for Events online.
+
+Give Feedback to support improvement.
+
+10. What contact details are provided?
+
+Vellore Institute of Technology
+
+Vellore, Tamil Nadu 632014, India
+
+11. On which social media platforms is 5th Pillar VIT active?
+
+The club is active on:
+
+Instagram
+
+Facebook
+
+LinkedIn
+
+------------------------------------------------------------
+hackathons
+
+1. What is the purpose of the “Hackathon Outputs” page?
+
+This page showcases the innovation outputs from hackathons and ideathons organized by the club. It highlights the works that were proposed, reviewed, and published as a result of these events.
+
+2. What kind of outputs are published here?
+
+The page mentions:
+
+“Published the works proposed in our hackathons and ideathons after review.”
+This means that only reviewed and approved submissions from events are published.
+
+-----------------------------------------------------------------------
+newswleter
+
+1. What is the purpose of the “Annual Newsletter” page?
+
+This page allows visitors to access and download the 5th Pillar VIT’s yearly newsletter, which highlights achievements, events, and community stories.
+
+2. What does the Hero section highlight?
+
+The Hero section displays:
+
+A badge: “Blog & Newsletter”
+
+The page title: “Annual Newsletter”
+
+3. What content is included in the 2023 Edition Newsletter?
+
+The 2023 edition features achievements, events, and community stories from the club’s activities during the year.
+
+4. How can I download the 2023 Newsletter?
+
+You can click the “Download” button on the page to access the newsletter PDF file.
+
+5. What does the navigation menu include on this page?
+
+The navigation bar provides links to:
+
+Home
+
+About Us (Club Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Highlights, Collaborative, Archived)
+
+Committees (List, Activities)
+
+Blog (Articles, Hackathon Outputs)
+
+Collaborators (Partner Profiles, Guest Speakers, Partnership Inquiry)
+
+Outreach (Projects, Alumni Network)
+
+Contact (Event Registration, Join Our Club, Feedback)
+
+Resources (Legal Awareness, FAQ)
+
+6. How does the footer describe the club’s mission?
+
+The footer states:
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+7. What Quick Links are available in the footer?
+
+About Us
+
+Events
+
+Committees
+
+Blog
+
+8. How can I get involved with 5th Pillar VIT?
+
+You can:
+
+Join the Club
+
+Register for Events
+
+Provide Feedback through the links provided in the footer.
+
+-----------------------------------------------------------------------
+partners
+
+3. Who are the esteemed partners mentioned?
+
+The partners include:
+
+Namaa Chai
+
+E2PC (Eco Club of VIT)
+
+IGEN
+
+IEEE EMBS
+
+WORTH Trust
+
+IEEE RAS
+
+IEEE EDS
+
+4. What is Namaa Chai’s contribution?
+
+Founded by a VIT alumnus, Namaa Chai introduced Biscuit Chai served in edible cups.
+They sponsored Fairs of Freedom (Riviera 2023) by providing participant vouchers.
+
+5. How did E2PC collaborate with 5th Pillar VIT?
+
+E2PC, the official eco club of VIT, worked at the ground level for environmental protection and collaborated on Policies & Prototypes (Ideathon).
+
+6. What role does IGEN play?
+
+IGEN:
+
+Connects green professionals to advance Sustainable Development Goals (SDGs).
+
+Acts as a UNDESA NGO.
+
+Collaborated externally on EcoVision Hack (Gravitas 2023).
+
+7. How did IEEE EMBS collaborate?
+
+IEEE EMBS, which focuses on medicine and biology through engineering, collaborated internally on EcoVision Hack (Gravitas 2023).
+
+8. What does WORTH Trust do?
+
+Established in 1969, WORTH Trust provides vocational training to empower persons with disabilities.
+They collaborated on the outreach event “Let’s Cherish.”
+
+9. What was IEEE RAS’s contribution?
+
+IEEE RAS, promoting robotics and automation, collaborated on the event “Robotics for a More Just and Equitable Future.”
+
+10. How did IEEE EDS participate?
+
+IEEE EDS, advancing electron/ion device technology, collaborated internally for EcoVision Hack (Gravitas 2023).
+
+11. What does the navigation menu include?
+
+The nav menu provides links to:
+
+Home
+
+About Us (Club Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Highlights, Collaborative, Archived)
+
+Committees (List, Activities)
+
+Blog (Annual Newsletter, Hackathon Outputs)
+
+Collaborators (Partner Profiles, Guest Speakers, Partnership Inquiry)
+
+Gallery (Photo Albums, Videos, Moments)
+
+Outreach (Projects, Alumni Network)
+
+Contact (Event Registration, Join Club, Feedback)
+
+Resources (Legal Awareness, FAQ)
+
+12. How does the footer describe the club’s mission?
+
+The footer states:
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+13. What Quick Links are available in the footer?
+
+About Us
+
+Events
+
+Committees
+
+Blog
+
+14. How can students and visitors get involved?
+
+They can:
+
+Join the Club
+
+Register for Events
+
+Give Feedback
+
+15. What contact information is provided?
+
+Vellore Institute of Technology
+
+Vellore, Tamil Nadu 632014, India
+
+-----------------------------------------------------------------------
+
+partnership
+
+3. How can I partner with 5th Pillar VIT?
+
+You can partner with the club by submitting a Partnership Proposal Form available on the page. The form link redirects you to a Google Form for submitting your details and proposal.
+
+4. Who can collaborate with 5th Pillar VIT?
+
+Any organization, guest speaker, NGO, social initiative, or group whose goals align with the mission of democracy, transparency, and civic awareness is welcome to collaborate.
+
+5. What types of collaborations are possible?
+
+Collaborations can include:
+
+Joint events and workshops
+
+Guest lectures or speaker sessions
+
+Awareness projects and campaigns
+
+Resource sharing and civic engagement activities
+
+6. Where can I find information about past collaborations?
+
+Details about Partner Profiles and Guest Speakers can be found under the Collaborators section of the website.
+
+7. What other sections are available on the 5th Pillar VIT website?
+
+The website provides access to:
+
+About Us (Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Highlights, Collaborative Events, Archives)
+
+Committees (Committee List & Activities)
+
+Blog (Articles, Annual Newsletter, Hackathon Outputs)
+
+Gallery (Photos, Videos, Moments)
+
+Outreach (Projects & Alumni Network)
+
+Contact (Event Registration, Join Club, Feedback)
+
+Resources (Legal Awareness & FAQ)
+
+8. How can I join the club as a student?
+
+Students can join by filling the Join Club Registration Form available in the Get Involved section of the website.
+
+9. How can I register for events?
+
+Event registration is available through the Event Registration link under the Contact / Get Involved section.
+
+10. How can I provide feedback?
+
+A Feedback Form is available on the website under the Contact / Get Involved section for sharing your suggestions and experiences.
+
+11. How can I contact 5th Pillar VIT?
+
+The club is based at:
+Vellore Institute of Technology, Vellore, Tamil Nadu 632014, India.
+
+-------------------------------------------------------------------
+speakers
+
+1. What is the purpose of the Guest Speakers page?
+
+The Guest Speakers page highlights distinguished speakers who have shared their expertise and experiences with the 5th Pillar VIT community.
+
+2. Who are the guest speakers featured on this page?
+
+The featured guest speakers are:
+
+Dr. B. Radhakrishnan – Expert in medicine, molecular biology, and public health.
+
+Er. Indrani Radhakrishnan – Software engineer, community leader, and VIT alumna.
+
+3. What is Dr. B. Radhakrishnan’s background?
+
+Doctor in Veterinary Medicine from Madras Veterinary College.
+
+Master’s in Animal Science from Oklahoma State University.
+
+Ph.D. in Molecular Biology from Georgetown University School of Medicine, Washington DC.
+
+Faculty member at Georgetown University.
+
+Collaborated with the National Institute of Health (NIH).
+
+Currently works with the State of Maryland Department of Health focusing on health policy research and epidemiology of disease patterns.
+
+Delivered a talk on “CASA: Substance Abuse A Global Concern.”
+
+4. What is Er. Indrani Radhakrishnan’s background?
+
+Graduate of Vellore Engineering College (now VIT).
+
+Master’s in Computer Science from the University of Maryland.
+
+Software engineer with 25 years of experience in senior and lead roles in Washington DC.
+
+Mobilized VIT alumni and helped form the first VIT Alumni Chapter in Washington DC, inaugurated by the Chancellor.
+
+Actively involved in Washington Tamil Sangam (Vice President) and FETNA community activities.
+
+Delivered a talk on “Memories From The VEC Days.”
+
+5. What is the mission of 5th Pillar VIT?
+
+The mission is to encourage, enable, and empower every citizen of India to eliminate corruption and strengthen democracy through civic awareness and student engagement.
+
+6. What navigation options are available on the website?
+
+The top navigation provides access to:
+
+Home
+
+About Us – Club Introduction, Messages, Board Members, Timeline
+
+Events – Calendar, Highlights, Collaborative Events, Archives
+
+Committees – List & Activities
+
+Blog – Articles, Newsletter, Hackathon Outputs
+
+Collaborators – Partner Profiles, Partnership Inquiry
+
+Gallery – Photos, Videos, Moments
+
+Outreach – Projects, Alumni Network
+
+Contact – Event Registration, Join Club, Feedback
+
+Resources – Legal Awareness, FAQ
+
+7. How can students and visitors get involved with 5th Pillar VIT?
+
+You can:
+
+Join the Club through the registration form.
+
+Register for events online.
+
+Provide feedback via the website’s feedback form.
+
+8. Where is 5th Pillar VIT located?
+
+Vellore Institute of Technology, Vellore, Tamil Nadu – 632014, India.
+
+9. What social media platforms does 5th Pillar VIT use?
+
+Instagram: @5pvit
+
+Facebook: 5th Pillar VIT
+
+LinkedIn: 5th Pillar
+
+10. What message is displayed in the footer of the site?
+
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+Also: © 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.
+
+------------------------------------------------------------------------
+activities
+
+1. What is the purpose of the “Committee Activities” page?
+
+The page highlights the initiatives, projects, and achievements of different committees under 5th Pillar VIT, showcasing their roles, contributions, and impact within and beyond the university.
+
+2. What are the achievements of the Events Department?
+
+Conducted 75 events during 2023–24.
+
+Topped the VIT events chart till July 2023 with 26 events.
+
+Collaborations: 7
+
+Articles published: 25+
+
+Special events conducted:
+
+Campaign Against Substance Abuse
+
+Alumni Event
+
+Sustainable Development Goals awareness
+
+Outreach Event
+
+“Law and You” legal awareness series
+
+Included Riviera 2023 (5 events), Gravitas 2023 (1 event), and 4 collaborative events.
+
+Covered sensitive and national-level topics through sessions, discussions, hackathons, ideathons, and quizzes.
+
+3. What does the Editorial Department do?
+
+Migrated 5th Pillar’s Blog from WordPress to Medium while preserving 200+ articles.
+
+Published 25+ new articles.
+
+Started an Annual Newsletter.
+
+Published reviewed works from hackathons and ideathons.
+
+Blog link: https://medium.com/@5thpillar
+
+4. What are the responsibilities of the Technical Department?
+
+Manages the club’s technical infrastructure including websites, registrations, and apps.
+
+Ensures security and user-friendly experiences.
+
+Open to feedback and improvement requests via the feedback page.
+
+5. What does the Design Department handle?
+
+Creates posts, photos, videos, and manages content across Instagram, Facebook, and LinkedIn.
+
+Designs material for yearly newsletters and article publications.
+
+Keeps members and followers updated on upcoming initiatives.
+
+6. What role does the Finance Department play?
+
+Plans and executes events, hackathons, and projects within budget constraints.
+
+Seeks collaborators and partners to expand impact.
+
+7. What is the function of the Outreach Department?
+
+Promotes the club’s events, hackathons, and articles both inside VIT Vellore and externally.
+
+Focuses on marketing initiatives to expand the club’s reach.
+
+8. What kind of events does 5th Pillar VIT conduct?
+
+Informative sessions, group discussions, quizzes, hackathons, ideathons, alumni events, and outreach programs.
+
+Events often cover stigmatized areas requiring awareness.
+
+Some events include national-level external participants.
+
+9. How does the club promote legal awareness?
+
+Through the “Law and You” series, designed to educate students and the community about legal rights and responsibilities.
+
+10. Where can I find photos from committee activities?
+
+The Gallery Section showcases photos, including event highlights and committee work. The page displays images of community initiatives and club activities.
+
+11. How can students get involved?
+
+Students can:
+
+Join the club via the registration page.
+
+Register for events online.
+
+Provide feedback for continuous improvement.
+
+12. Where can I find official updates and content?
+
+Blog: Medium – @5thpillar
+
+Social Media: Instagram, Facebook, and LinkedIn (links available in the footer).
+
+Newsletter: Annual publication.
+
+13. How do I contact 5th Pillar VIT?
+
+Address: Vellore Institute of Technology, Vellore, Tamil Nadu 632014, India
+
+Social media:
+
+Instagram: 5pvit
+
+Facebook: Official Page
+
+LinkedIn: 5th Pillar
+-----------------------------------------------------------------------
+list
+
+The Committee List page provides details of the four specialized committees at 5th Pillar VIT, along with their leadership teams and key activities.
+
+2. Which committees are part of 5th Pillar VIT?
+
+There are four main committees:
+
+Operations Committee
+
+Events Committee
+
+Technical Committee 
+
+Outreach Committee
+
+Media & Tech Committee
+
+this committies are managed by latest board members ...
+
+7. How is the leadership structure organized in each committee?
+
+Every committee has lead and team members
+
+8.board positions in club?
+chairperson,vice chairperson,secretary,editorial head,finance head,outreach head , design head ,technical head ,finance head and members of each fields
+
+9. Is there a way to contact board members directly?
+
+Yes, a dedicated “Visit Board” section is linked from the committee page, where you can explore details about board members and find contact buttons
+
+--------------------------------------------------------------------
+archieved events
+
+1. What is the purpose of the “Archived Events” page?
+
+The page showcases past events organized by 5th Pillar VIT, along with their categories, highlights, and impact on the community.
+
+3. What are the overall event statistics displayed?
+
+The key stats are:
+
+75 total events conducted
+
+500+ participants engaged
+
+4 committees involved in organizing
+
+3 years of active contributions
+
+4. What are the main event categories?
+
+Archived events are divided into four categories:
+
+Legal Awareness
+
+Democratic Engagement
+
+Environmental Sustainability
+
+Social Outreach
+
+5. What events were held under the Legal Awareness category?
+
+Moot Court – Mock Supreme Court proceedings
+
+Law and You Series – Legal awareness workshops
+
+RTI Training Sessions – Right to Information workshops
+Impact: Improved legal literacy among students.
+
+6. What events fall under Democratic Engagement?
+
+Fairs of Freedom – Electoral simulation
+
+Policies and Prototypes – Policy discussion forum
+
+Democratic Dialogues – Open discussion sessions
+Impact: Promoted civic engagement and strengthened democratic values.
+
+7. What initiatives were taken under Environmental Sustainability?
+
+EcoVision Hack – SDG-focused hackathon
+
+Green Policy Forums – Environmental policy discussions
+
+Sustainability Workshops – Awareness sessions
+Impact: Raised environmental consciousness and inspired student-led action.
+
+8. What events are included in the Social Outreach category?
+
+Let’s Cherish – Outreach for specially-abled children
+
+Community Engagement Programs
+
+Alumni Networking Events
+Impact: Created positive change and stronger community connections.
+
+9. How can I explore other sections of the 5th Pillar VIT site?
+
+Through the navigation bar, you can access:
+
+About Us: Introduction, Messages, Board Members, Timeline
+
+Events: Calendar, Highlights, Archived Events
+
+Committees: Committee List, Committee Activities
+
+Blog: Articles, Newsletter, Hackathon Outputs
+
+Collaborators: Partners, Guest Speakers, Partnership Inquiry
+
+Gallery: Photos, Videos, Moments
+
+Outreach: Projects, Alumni Network
+
+Contact: Event Registration, Join Our Club, Feedback
+
+Resources: Legal Awareness, FAQ
+
+10. How can I get involved in upcoming activities?
+
+Options include:
+
+Join Club via registration form
+
+Register for Events
+
+Submit Feedback through the dedicated page
+
+11. What is the mission of 5th Pillar VIT?
+
+To encourage, enable, and empower every citizen of India to eliminate corruption at all levels of society through awareness programs, student projects, and civic engagement.
+
+12. Where is the club located?
+
+Vellore Institute of Technology,
+Vellore, Tamil Nadu 632014,
+India.
+
+13. How can I connect with 5th Pillar VIT on social media?
+
+You can follow us on:
+
+Instagram: @5pvit
+
+Facebook: 5th Pillar VIT
+
+LinkedIn: 5th Pillar
+
+14. Who holds the rights to the page?
+
+© 2025 5th Pillar VIT. All rights reserved.
+Tagline: Designed for democracy and transparency.
+
+--------------------------------------------------------------------
+highlights
+
+1. What is the purpose of the Event Calendar page?
+
+The Event Calendar page provides a complete schedule of events organized by 5th Pillar VIT, including past, ongoing, and upcoming events.
+
+2. What does the hero section highlight?
+
+It introduces the page with:
+
+A badge: “Events”
+
+Title: “Event Calendar”
+
+Subtitle: “Complete schedule of events for 2023, 2025”
+
+3. What 2025 event is listed?
+
+Quanta’25
+
+Type: Gravitas
+
+Date: 01.09.2025
+
+Venue: SMV ST-15
+
+4. Which 2023 events are listed?
+
+The 2023 calendar includes:
+
+Moot Court – 23.02.2023 – VCC TT-2 (Riviera)
+
+Ficcom – 24.02.2023 – VCC TT-2 (Riviera)
+
+People Mixer – 25.02.2023 – VCC TT-2 (Riviera)
+
+Treasure Hunt – 21.02.2023 – GDN Classroom (Riviera)
+
+Fairs of Freedom – 26.02.2023 – TT-302, TT-303 (Riviera)
+
+EcoVision Hack – Multiple Days – Various Venues (Gravitas)
+
+5. Are there future events planned?
+
+Yes. The page mentions “More Events Coming Soon” for 2025, with new initiatives and collaborations on the way.
+
+6. What is the mission of 5th Pillar VIT mentioned on this page?
+
+The mission is:
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+-----------------------------------------------------------------------
+
+1. What is the purpose of the Collaborative Events page?
+
+The page highlights partnerships and collaborations that 5th Pillar VIT has established with organizations, societies, and networks to create meaningful impact.
+
+2. Who are the key collaborators featured?
+
+The collaborators displayed include:
+
+UNDP India – Mentorship and outreach support for the SDG Hackathon.
+
+WORTH Trust – Inclusive outreach events for specially-abled children.
+
+VIT Legal Cell – Joint Moot Court sessions and legal awareness initiatives.
+
+IEEE VIT – Collaborative ideathons and policy-prototype showcases.
+
+3. How are collaborator details presented?
+
+Each collaborator appears as a card that shows:
+
+Name
+
+About section (description of the organization)
+
+Collaboration section (how they partnered with 5th Pillar VIT)
+
+4. What is the call-to-action (CTA) on this page?
+
+The CTA encourages new partnerships with the text:
+“Want to Collaborate? We’re always looking for new partnerships to create meaningful impact. Get in touch to explore collaboration opportunities.”
+
+5. What additional resources are linked from this page?
+
+A hero button links to:
+
+Article Blog (Medium): 5th Pillar Medium Blog
+
+6. What links are available in the navigation bar?
+
+Home
+
+About Us (Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Highlights, Archived)
+
+Committees (Committee List, Activities)
+
+Blog (Articles, Newsletter, Hackathon Outputs)
+
+Collaborators (Partners, Guest Speakers, Partnership Inquiry)
+
+Gallery (Photos, Videos, Moments)
+
+Outreach (Projects, Alumni Network)
+
+Contact (Event Registration, Join Our Club, Feedback)
+
+Resources (Legal Awareness, FAQ)
+
+7. What is the mission statement included on this page?
+
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+8. What Quick Links are available in the footer?
+
+About Us
+
+Events
+
+Committees
+
+Blog
+
+9. How can students and collaborators get involved?
+
+They can:
+
+Join the Club
+
+Register for Events
+
+Provide Feedback
+
+Initiate Partnerships through collaboration inquiries
+
+--------------------------------------------------------------------
+highlights
+
+1. What is the Event Highlights page about?
+
+The page showcases the most impactful events organized by 5th Pillar VIT, including descriptions, photos, videos, and success stories.
+
+2. Which major events are highlighted?
+
+The highlighted events include:
+
+Treasure Hunt – Campus-wide socio-political riddle-solving challenge.
+
+FICCOM – Trivia and debates around fictional shows and characters, with participants dressing up and competing.
+
+EcoVision Hack – Two-day UN SDG–aligned hackathon addressing poverty, inequality, climate change, and environmental issues.
+
+Moot Court – Mock Supreme Court simulation, enhancing legal reasoning and courtroom skills.
+
+Fairs of Freedom – Election and governance simulation involving forming parties, voting, and cabinet creation.
+
+People Mixer – Social event with team games and ice-breakers to build community and connections.
+
+3. What festivals or occasions hosted these events?
+
+Riviera 2023 – Hosted Treasure Hunt, FICCOM, Moot Court, Fairs of Freedom, and People Mixer.
+
+Gravitas 2023 – Hosted EcoVision Hack.
+
+4. What were the main impacts of these events?
+
+Each event focused on unique areas:
+
+Detective Engagement (Treasure Hunt)
+
+Fictional Engagement (FICCOM)
+
+Global SDG Awareness (EcoVision Hack)
+
+Legal Education (Moot Court)
+
+Democratic Engagement (Fairs of Freedom)
+
+Community Building (People Mixer)
+
+5. What is the purpose of the Treasure Hunt?
+
+It encouraged participants to solve socio-political riddles and explore the campus while engaging critically with social themes.
+
+6. What made FICCOM special?
+
+It combined pop culture with debate and games, allowing participants to role-play as their favorite characters while learning through fun.
+
+7. What was the EcoVision Hack about?
+
+A two-day hackathon aligned with the United Nations Sustainable Development Goals (SDGs), where students proposed solutions to global issues like poverty, inequality, climate change, and environmental degradation.
+
+8. What was the goal of Moot Court?
+
+To simulate real Supreme Court proceedings where students acted as lawyers and judges, improving their legal reasoning, advocacy, and awareness of judicial processes.
+
+9. What did participants do in Fairs of Freedom?
+
+They simulated a democratic election process by:
+
+Forming political parties
+
+Contesting elections
+
+Voting
+
+Building cabinets and assigning portfolios
+
+10. How did the People Mixer help students?
+
+It created a casual, friendly environment with ice-breakers and games, strengthening bonds among students from different programs.
+
+11. What does the navigation menu on this page include?
+
+Home
+
+About Us (Introduction, Messages, Board Members, Timeline)
+
+Events (Calendar, Collaborative, Archived, Highlights)
+
+Committees (List, Activities)
+
+Blog (Articles, Newsletter, Hackathon Outputs)
+
+Collaborators (Partners, Guest Speakers, Partnership Inquiry)
+
+Gallery (Photos, Videos, Moments)
+
+Outreach (Projects, Alumni Network)
+
+Contact (Registration, Join Club, Feedback)
+
+Resources (Legal Awareness, FAQ)
+
+12. What is the club’s mission statement shown here?
+
+“Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.”
+
+---------------------------------------------------------------------------
+
+photos
+
+What the Photos Likely Show
+1–5 → Treasure Hunt (Riviera 2023)
+
+Students solving socio-political riddles.
+
+Teams running across campus.
+
+Group photos at checkpoints.
+
+Final winners receiving recognition.
+
+6–10 → FICCOM (Riviera 2023)
+
+Participants dressed as fictional characters.
+
+On-stage debates and trivia sessions.
+
+Audience enjoying pop-culture games.
+
+Teams competing in themed challenges.
+
+11–15 → EcoVision Hack (Gravitas 2023)
+
+Hackathon participants coding in labs.
+
+Mentors guiding teams on UN SDG solutions.
+
+Presentation of sustainable prototypes.
+
+Winning teams holding certificates and awards.
+
+16–20 → Moot Court (Riviera 2023)
+
+Students dressed as judges, lawyers, and petitioners.
+
+Mock Supreme Court setup in VCC hall.
+
+Arguing cases in front of a jury panel.
+
+Faculty mentors and advisors overseeing sessions.
+
+21–25 → Fairs of Freedom (Riviera 2023)
+
+Students forming political parties.
+
+Campaign posters, slogans, and group discussions.
+
+Voting booths and ballot processes.
+
+Cabinet formation and announcement of winning parties.
+
+26–30 → People Mixer (Riviera 2023)
+
+Students playing ice-breaker and team games.
+
+Casual networking and group laughter.
+
+Mixed teams from different programs bonding.
+
+Informal cultural sharing and performances.
+
+31–35 → Outreach & Community Engagement
+
+Visits to schools / NGOs.
+
+Interaction with specially-abled children (via WORTH Trust).
+
+Donation drives, awareness campaigns.
+
+Group volunteer photos.
+
+36–40 → Club Activities & Collaborations
+
+Meetings with collaborators like UNDP India, VIT Legal Cell, IEEE VIT.
+
+Behind-the-scenes of committee planning.
+
+Board members’ group portraits.
+
+Celebratory closing moments of events.
+
+🎯 Summary
+
+The photos are a visual archive of student life at 5th Pillar VIT, showing:
+
+Event highlights (Treasure Hunt, Moot Court, Hackathons, Mixers)
+
+Community projects (Outreach, Social impact)
+
+Collaborations (with UNDP, WORTH Trust, IEEE, Legal Cell)
+
+Fun + learning moments (debates, games, coding, elections)
+
+-----------------------------------------------------------------------
+videos
+
+Q3: What do the individual videos cover?
+
+While exact content depends on your recordings, typical categories might be:
+
+Video 1 (video1.mp4) – Highlights from Treasure Hunt or FICCOM events, showing students participating, competing, and celebrating.
+
+Video 2 (video2.mp4) – Workshops or Hackathon activities, showing coding, brainstorming sessions, and presentations.
+
+Video 3 (video3.mp4) – Community outreach or social initiatives, such as visits to schools, NGOs, or awareness campaigns.
+
+Video 4 (video4.mp4) – Club collaborations and events, featuring partner interactions, guest speakers, and cultural programs.
+
+---------------------------------------------------------------------------
+
+Email Address
+
+fifthpillar2023@gmail.com
+(Used in the “Send Mail” button: mailto:fifthpillar2023@gmail.com)
+
+Instagram
+
+https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
+(Used in both “Follow us On” section and footer)
+
+Facebook
+
+https://www.facebook.com/share/1RzW5nhZNV/
+(Used in both “Follow us On” section and footer)
+
+LinkedIn
+
+https://www.linkedin.com/company/5th-pillar/
+(Used in both “Follow us On” section and footer)
+
+2. Social Media Links in This Code
+Platform	URL
+Instagram	https://www.instagram.com/5pvit
+
+Facebook	https://www.facebook.com/share/1RzW5nhZNV/
+
+LinkedIn	https://www.linkedin.com/company/5th-pillar/
+
+-------------------------------------------------------------
+alumni
+
+Board 2019-20
+
+Q: Who were the Chairperson and Vice-Chairpersons in 2019-20?
+A: Chairperson: Pranav Mandala
+Vice-Chairpersons: Gopika Anand, Harsha Chowdary
+
+Q: Who were the Heads of Departments in 2019-20?
+A: Editorial Head: Shivam Pandey
+Design Head: Deepu Phanindra
+PR Head: Rashi Kasera
+Logistics Head: Ishal Abhishek
+Events Head: Shivansh Mishra
+Outreach Head: Sri Aravind
+Media Head: Ashish Chari
+Finance Head: Balumuri Nihanth
+
+Board 2020-21
+
+Q: Who were the Chairperson and Vice-Chairpersons in 2020-21?
+A: Chairperson: Aman Agarwal
+Vice-Chairpersons: Rimjhim Singh, Alekya Kowta
+
+Q: Who were the Heads of Departments in 2020-21?
+A: Marketing Head: Manav Singla
+Editorial Head: Karan Bhowmick
+Design Head: Nikhita Pedamallu
+HR Head: Sravya Gadamsetty
+Logistics Head: Sunil Kumar Sah
+Events Head: G. Akhila
+Finance Head: Hamsitha Challagundla
+Media Head: Khushi Rohra
+Extra-Curricular Head: Divya Srujana
+
+Board 2021-22
+
+Q: Who were the Chairperson and Vice-Chairpersons in 2021-22?
+A: Chairperson: Nimish Aggarwal
+Vice-Chairpersons: Vrushali Deshmukh, Sushant Srivastav
+
+Q: Who were the Heads of Departments in 2021-22?
+A: Events Head: Vidhyalakshmi Venkatesh
+Design Head: Dhananjay Gupta
+Editorial Head: Abhinav Gorantla
+Social Media & Marketing Head: Shistata Subedi
+HR Head: Sumona Ghosh
+Finance Head: Jasmine Pradhan
+Extra-Curricular Head: Rishi Jain
+
+Board 2022-23
+
+Q: Who were the Chairperson and Vice-Chairperson in 2022-23?
+A: Chairperson: Shihij Hanjura
+Vice-Chairperson: Aniket Banga
+
+Q: Who were the Heads of Departments in 2022-23?
+A: Secretary: Danika Shrivastava
+Co-Secretary: Farhan Abdul Khader Kooliayttayil
+Events Head: Varun Pandey
+Design Head: Aditya Kar
+Editorial Head: Viraaj Kumar Kulshreshtha
+HR Head: Anushka Upadhyay
+Finance Head: Muskan Sah
+Outreach Head: Dikshya Adhikari
+
+Board 2023-24
+
+Q: Who were the Chairperson and Vice-Chairperson in 2023-24?
+A: Chairperson: Vishal Agrawal
+Vice-Chairperson: Sushil Krishnan
+
+Q: Who were the Heads of Departments in 2023-24?
+A: Event Lead: Naman Kumar
+Secretary: T S N Venkat
+Co-Secretary: Nakul Tomar
+Human Resource Lead: Samil Latiff
+Finance Lead: Sarthak Johri
+Design Lead: Aaryan Bansal
+Editorial Lead: Diya Ramani
+Outreach Lead: Saad Khan
+
+
+Student Council / Club FAQ – VIT 2025-26 Board
+
+Q1: Who is the Chairperson of the board?
+A: Sarayavalasa Meghavini
+
+Roll No: 22BCI0188
+
+Email: meghavini.s2022@vitstudent.ac.in
+
+Q2: Who is the Vice Chairperson?
+A: Anushree Tyagi
+
+Roll No: 23BCB0108
+
+Email: anushree.tyagi2023@vitstudent.ac.in
+
+Q3: Who is the Secretary?
+A: Kudurupaka Guna Teja
+
+Roll No: 23MIS0666
+
+Email: kudurupakaguna.teja2023@vitstudent.ac.in
+
+Q4: Who is the Co-Secretary?
+A: Mahika Goel
+
+Roll No: 23BCB0128
+
+Email: mahika.goel2023@vitstudent.ac.in
+
+Q5: Who is the Finance Head?
+A: Alapati Jahnavi
+
+Roll No: 24MIS0139
+
+Email: alapati.jahnavi2024@vitstudent.ac.in
+
+Q6: Who is the Technical Head?
+A: Nandini Dhaka
+
+Roll No: 23BCE0860
+
+Email: nandini.dhaka2023@vitstudent.ac.in
+
+Q7: Who is the Editorial Head?
+A: Divyanjali Tyagi
+
+Roll No: 23BCB0123
+
+Email: divyanjali.tyagi2023@vitstudent.ac.in
+
+Q8: Who is the Outreach Head?
+A: Ravilla Rohitha
+
+Roll No: 24MIS0070
+
+Email: rohitha.r2024@vitstudent.ac.in
+
+Q9: Who is the Events Head?
+A: Bhuvaneswari U
+
+Roll No: 24MIS0041
+
+Email: bhuvaneswari.2024a@vitstudent.ac.in
+
+Q10: Who is the Design Head?
+A: Shreya Sinha
+
+Roll No: 23MIS0244
+
+Email: shreya.sinha2023a@vitstudent.ac.in
+
+Q11: Who are the VTOP Representatives?
+A:
+
+Shreya Sinha – 23MIS0244 – shreya.sinha2023a@vitstudent.ac.in
+
+Divyanjali Tyagi – 23BCB0123 – divyanjali.tyagi2023@vitstudent.ac.in
+
+Q12: Who is the Technical Developer?
+A: Zaheer R
+
+Roll No: 24MIS0203
+
+Email: rachakula.zaheer2024@vitstudent.ac.in
+---------------------------------------------------------------
+
+Q9: Who manages the content and projects on this page?
+A: The club’s board and committee heads manage their respective sections and content, ensuring accurate project updates and social media engagement.
+
+5th Pillar VIT – Board & Feedback FAQ (2025-26)
+Board Members & Roles
+
+Chairperson
+
+Name: Sarayavalasa Meghavini
+
+Roll No: 22BCI0188
+
+Email: meghavini.s2022@vitstudent.ac.in
+
+Vice Chairperson
+
+Name: Anushree Tyagi
+
+Roll No: 23BCB0108
+
+Email: anushree.tyagi2023@vitstudent.ac.in
+
+Secretary
+
+Name: Kudurupaka Guna Teja
+
+Roll No: 23MIS0666
+
+Email: kudurupakaguna.teja2023@vitstudent.ac.in
+
+Co-Secretary
+
+Name: Mahika Goel
+
+Roll No: 23BCB0128
+
+Email: mahika.goel2023@vitstudent.ac.in
+
+Finance Head
+
+Name: Alapati Jahnavi
+
+Roll No: 24MIS0139
+
+Email: alapati.jahnavi2024@vitstudent.ac.in
+
+Technical Head
+
+Name: Nandini Dhaka
+
+Roll No: 23BCE0860
+
+Email: nandini.dhaka2023@vitstudent.ac.in
+
+Editorial Head
+
+Name: Divyanjali Tyagi
+
+Roll No: 23BCB0123
+
+Email: divyanjali.tyagi2023@vitstudent.ac.in
+
+Outreach Head
+
+Name: Ravilla Rohitha
+
+Roll No: 24MIS0070
+
+Email: rohitha.r2024@vitstudent.ac.in
+
+Events Head
+
+Name: Bhuvaneswari U
+
+Roll No: 24MIS0041
+
+Email: bhuvaneswari.2024a@vitstudent.ac.in
+
+Design Head
+
+Name: Shreya Sinha
+
+Roll No: 23MIS0244
+
+Email: shreya.sinha2023a@vitstudent.ac.in
+
+Technical Developer
+
+Name: Zaheer R
+
+Roll No: 24MIS0203
+
+Email: rachakula.zaheer2024@vitstudent.ac.in
+
+VTOP Representatives
+
+Shreya Sinha – 23MIS0244 – shreya.sinha2023a@vitstudent.ac.in
+
+Divyanjali Tyagi – 23BCB0123 – divyanjali.tyagi2023@vitstudent.ac.in
+
+Feedback Page FAQ
+
+Q1: What is the purpose of the Feedback page?
+
+Allows students and visitors to provide feedback on 5th Pillar VIT projects, events, and club activities.
+
+Q2: What sections are on the page?
+
+Navigation Menu – Desktop and mobile-friendly links to all sections.
+
+Hero Section – Highlights the club with badge and heading.
+
+Projects Section – Showcases club projects.
+
+Social Media Section – Links to Instagram, Facebook, and LinkedIn.
+
+Footer Section – Quick Links, Get Involved, and Contact Info.
+
+Q3: How can I navigate the site?
+
+Desktop: Hover over dropdowns.
+
+Mobile/Tablet: Open the hamburger menu (☰) to access a drawer with links.
+
+Q4: How do I submit feedback?
+
+Go to Contact > Feedback from the menu for the feedback form.
+
+Q5: How can I join the club or register for events?
+
+Navigate to Contact > Join Our Club or Event Registration.
+
+Q6: Which social media platforms can I follow 5th Pillar VIT on?
+
+Instagram: 5pvit
+
+Facebook: 5th Pillar Facebook
+
+LinkedIn: 5th Pillar LinkedIn
+
+Q7: What contact information is provided?
+
+Location: Vellore Institute of Technology, Vellore, Tamil Nadu 632014, India
+
+Q8: Is the website mobile-friendly?
+
+Yes, with responsive navigation, collapsible dropdown menus, and smooth scrolling.
+
+Q9: Who manages the content and projects?
+
+The board members and committee heads manage their sections and social media updates.
+
+Q10: How is accessibility handled?
+
+ARIA labels, keyboard interactions, and touch-friendly menus are implemented for usability.
+
