@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Annual Newsletter – 5th Pillar VIT</title>
+  <link rel="icon" type=".ico/.jpg/.png" href="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Brand and neutrals */
+      --primary:#007BFF;
+      --primary-dark:#0056B3;
+      --democracy-blue:#0066CC;
+      --vit-gold:#FFB800;
+      --white:#FFFFFF;
+      --gray-50:#F8FAFC;
+      --gray-100:#F1F5F9;
+      --gray-200:#E2E8F0;
+      --gray-300:#CBD5E1;
+      --gray-400:#94A3B8;
+      --gray-500:#64748B;
+      --gray-600:#475569;
+      --gray-700:#334155;
+      --gray-800:#1E293B;
+      --gray-900:#0F172A;
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+      --container-max:1200px;
+      --radius:12px;
+      --radius-sm:8px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html, body { width:100%; overflow-x:hidden; }
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--gray-800);
+      background:var(--white);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--container-max);margin:0 auto;padding:0 1rem
+    ;}
+    /* Sticky Header / Navbar */
+    .header{
+      position:sticky;top:0;z-index:1000;
+      background:#0f2e75;
+      backdrop-filter:saturate(120%) blur(8px);
+      border-bottom:1px solid var(--gray-200);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      height:64px;  background:#0f2e75;
+    }
+    /* Branding */
+    .logo{
+      display:flex;align-items:center;gap:.75rem;text-decoration:none;
+    }
+    .logo-icon{
+      width:56px;height:40px;border-radius:10px;
+      background:linear-gradient(135deg, var(--primary), var(--democracy-blue));
+      display:flex;align-items:center;justify-content:center;color:#fff;
+      font-weight:700;box-shadow:var(--shadow-md);
+    }
+    .logo-icon span{font-size:1.25rem}
+    .logo-text h3{font-size:1.05rem;color:var(--primary);margin:0;width:30vw;}
+    .logo-text p{font-size:.75rem;color:var(--gray-500);margin:0;width:30vw;}
+    /* Menu (desktop default shell) */
+    .nav-menu{
+      display:flex;align-items:center;gap:.25rem;
+      background:var(--white);
+      border-radius:10px;
+      margin-right:2%;
+    
+    }
+    .nav-item,.nav-menu, .nav-link, .dropdown-toggle{
+      position:relative;
+      display:flex;align-items:center;gap:.4rem;
+      padding:.6rem .9rem;border-radius:8px;
+      color:white;text-decoration:none;font-weight:600;
+      transition:color .2s ease, background .2s ease, box-shadow .2s ease;
+      background:#0f2e75;margin-left:-8%;
+      border:none;
+    }
+    /* Hover: blue text, white bg */
+    .nav-item:hover, .nav-link:hover, .dropdown-toggle:hover{
+      color:var(--primary);background:var(--white);
+    }
+
+        .container .card{
+      margin:10%;
+    }
+    .nav-item.active{color:var(--primary);background:var(--white);margin-right: 3%;}
+    /* Dropdown (desktop hover) */
+    .dropdown{position:relative}
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;
+      min-width:220px;background:#fff;border:1px solid var(--gray-200);
+      border-radius:10px;box-shadow:var(--shadow-lg);
+      padding:.5rem;display:none;
+      z-index:1001;
+    }
+    .dropdown-menu a{
+      display:block;padding:.55rem .7rem;border-radius:8px;
+      color:var(--gray-700);text-decoration:none;font-weight:500;
+    }
+    .dropdown-menu a:hover{color:var(--primary);background:var(--gray-100)}
+    @media (min-width:1025px){
+      .dropdown:hover>.dropdown-menu{display:block}
+    }
+    /* Toggle buttons */
+    .menu-toggle, .menu-close{
+      background:none;border:none;cursor:pointer;
+      width:40px;height:40px;border-radius:8px;
+      display:flex;align-items:center;justify-content:center;
+      color:var(--gray-700);
+    }
+    .menu-toggle:hover, .menu-close:hover{color:var(--primary)}
+    @media (min-width:1025px){
+      .menu-toggle, .menu-close{display:none}
+    }
+    /* Mobile / Tablet panel */
+    @media (max-width:1024px){
+      .nav-menu{
+        position:fixed;top:0;right:0;
+        height:100vh; /* fallback */
+        height:100dvh; /* dynamic viewport */
+        max-height:100dvh;
+        width:min(100vw, 420px);
+        background:#fff;box-shadow:var(--shadow-lg);
+        padding:0;
+        display:flex;flex-direction:column;
+        overflow-y:auto;overflow-x:hidden;
+        overscroll-behavior:contain;
+        transform:translateX(100%);
+        transition:transform .28s ease;
+        border-left:1px solid var(--gray-200);
+
+      }
+      .nav-menu.open{transform:translateX(0)}
+      .mobile-panel-header{
+        position:sticky;top:0;z-index:1;
+        display:flex;align-items:center;justify-content:flex-end;
+        height:64px;padding:0 12px;background:#fff;border-bottom:1px solid var(--gray-200);
+        width:100%;padding-top:3%;margin-left:0%; /* Adjusted to 0% for proper visibility */
+      }
+      .menu-scroll{
+        display:flex;flex-direction:column;
+        padding:12px 16px 20px 16px;
+        gap:.25rem;
+        margin-left:5%;
+      }
+      .nav-item, .nav-link, .dropdown-toggle{
+        width:100%;justify-content:space-between;
+        border:none;background:#fff;color:var(--gray-800);
+      }
+      .nav-item + .nav-item, .dropdown + .dropdown, .nav-link + .nav-link{margin-top:.25rem}
+      .dropdown-menu{
+        position:static;display:none;margin-top:.25rem;border-radius:8px;border:1px solid var(--gray-200);
+        box-shadow:none;padding:.35rem;
+      }
+      .dropdown.open>.dropdown-menu{display:block}
+    }
+    /* Desktop: arrange menu-scroll in a row */
+    @media (min-width:1025px){
+      .menu-scroll{
+        display:flex;flex-direction:row;align-items:center;gap:.25rem;
+      }
+      .mobile-panel-header{display:none}
+    }
+    /* Hero */
+    .hero{
+      background:linear-gradient(135deg, var(--primary), var(--democracy-blue));
+      color:#fff;padding:48px 0;
+      text-align:center;
+    }
+    .badge{
+      display:inline-block;padding:.4rem .8rem;border-radius:999px;
+      background:rgba(255,255,255,.9);color:var(--primary);font-weight:700;margin-bottom:1rem;
+    }
+    h1{font-size:2.2rem;font-weight:800}
+    @media (min-width:768px){h1{font-size:3rem}}
+    /* Card */
+    .card{
+      background:#fff;border-radius:12px;box-shadow:var(--shadow-md);
+      padding:1.5rem;
+    }
+    .container .card{
+      margin:10%;
+    }
+    .card-title{font-size:1.5rem;font-weight:800;margin-bottom:.5rem}
+    .card-content{color:var(--gray-600)}
+    /* Footer */
+    .footer{
+      background:var(--gray-800);color:#fff;padding:3rem 0 1rem;
+      margin-top:2rem;
+    }
+    .footer-content{
+      display:grid;grid-template-columns:1fr 2fr;gap:3rem;margin-bottom:2rem;margin-left:0%;
+    }
+    .footer-brand .logo-text h3{color:var(--primary);font-size:1.125rem;margin:0}
+    .footer-brand .logo-text p{color:var(--gray-400);font-size:.75rem;margin:0}
+    .footer-brand p{color:var(--gray-400);margin-top:1rem}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-column h4{color:#fff;font-size:1rem;margin-bottom:1rem}
+    .footer-column a{display:block;color:var(--gray-400);margin-bottom:.5rem;transition:color .3s ease}
+    .footer-column a:hover{color:var(--primary)}
+    .footer-column p{color:var(--gray-400);margin-bottom:.25rem}
+    /* Footer */
+.footer {
+    background: var(--gray-800);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-left:5%;
+}
+.footer-brand .logo-text h3 {
+    color: var(--primary);
+    font-size: 1.125rem;
+    margin: 0;
+}
+.footer-brand .logo-text p {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+    margin: 0;
+}
+.footer-brand p {
+    color: var(--gray-400);
+    margin-top: 1rem;
+}
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.footer-column h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.nav-item{
+  color:white;
+}
+.footer-column a:hover {
+    color: var(--primary);
+}
+.footer-column p {
+    color: var(--gray-400);
+    margin-bottom: 0.25rem;
+}
+.nav-bar{
+  background-color: #0f2e75;
+}
+.footer-bottom {
+    border-top: 1px solid var(--gray-700);
+    padding-top: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 0.875rem;
+}
+    .logo-img{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+    .logo-img img{height: clamp(28px, 5vw, 44px);width:auto;object-fit:contain;display:block}
+
+
+    @media (min-width:1024px){
+     .brand .logo-img img{
+        z-index:4000;
+     }    
+
+    }
+.hero .container{
+  margin-top:10%;
+}
+
+
+    @media(max-width:599px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    @media(max-width:640px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    .hero .container{
+  margin-top:10%;
+}
+
+
+    /* Buttons in hero card */
+    .btn{display:inline-flex; align-items:center; gap:.5rem; text-decoration:none}
+    .btn-hero{background:linear-gradient(135deg, var(--primary), var(--democracy-blue)); color:#fff; box-shadow:var(--shadow-md)}
+    .btn-large{padding:1rem 2rem; font-size:1rem; min-width:200px; border-radius:10%}
+    .btn-hero:hover{box-shadow:var(--shadow-lg); transform:translateY(-2px)}
+
+
+.header{
+position: fixed !important;
+top: 0;
+left: 0;
+right: 0;
+z-index: 99999 !important;
+}
+.matter{
+  margin-left: -5%;
+}
+    html{
+        user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="nav" aria-label="Site navigation">
+    <a class="logo" href="#">
+        <span class="logo-img">
+            <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" >
+        </span>
+      <div class="logo-text">
+        <h3>5th Pillar VIT</h3>
+        <p>Students's Club</p>
+      </div>
+    </a>
+
+    <!-- Mobile open (hamburger) -->
+    <button class="menu-toggle" id="menuOpen" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Menu -->
+    <nav class="nav-menu" id="primaryMenu" role="navigation">
+      <!-- Panel header for mobile/tablet -->
+      <div class="mobile-panel-header" id="mobilePanelHeader" hidden>
+        <button class="menu-close" id="menuClose" aria-label="Close menu" aria-controls="primaryMenu" aria-expanded="true">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Items container -->
+      <div class="menu-scroll">
+        <a href="index1.html" class="nav-item active">Home</a>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-about">
+            About Us <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-about">
+            <a href="about/introduction.html">Club Introduction</a>
+            <a href="about/messages.html">Messages</a>
+            <a href="about/board.html">Board Members</a>
+            <a href="about/timeline.html">Timeline</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-events">
+            Events <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-events">
+            <a href="events/calendar.html">Event Calendar</a>
+            <a href="events/highlights.html">Event Highlights</a>
+            <a href="events/collaborative.html">Collaborative Events</a>
+            <a href="events/archived.html">Archived Events</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-committees">
+            Committees <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-committees">
+            <a href="committees/list.html">Committee List</a>
+            <a href="committees/activities.html">Committee Activities</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-blog">
+            Blog <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-blog">
+            <a href="blog/articles.html">Blog Articles</a>
+            <a href="blog/hackathon.html">Hackathon Outputs</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-collab">
+            Collaborators <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-collab">
+            <a href="collaborators/partners.html">Partner Profiles</a>
+            <a href="collaborators/speakers.html">Guest Speakers</a>
+            <a href="collaborators/partnership.html">Partnership Inquiry</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-outreach">
+            Outreach <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-outreach">
+            <a href="outreach/projects.html">Projects</a>
+            <a href="outreach/alumni.html">Alumni Network</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-contact">
+            Contact <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-contact">
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/register1.html">Join Our Club</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-resources">
+            Resources <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="submenu-resources">
+            <a href="resources/legal.html">Legal Awareness</a>
+            <a href="resources/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div><!-- /.menu-scroll -->
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Blog & Newsletter</span>
+      <h1 class="title">Annual Newsletter</h1>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="container">
+    <div class="card">
+      <div class="card-title">2023 Edition Newsletter</div>
+      <p>Download the annual newsletter featuring achievements, events, and community stories.</p>
+      <br>
+      <div class="hero-buttons">
+        <a href="C:\Users\z4pro\OneDrive\Desktop\Documents\NEWSLETTER DEC 23.pdf" target="_Blank"  class="btn btn-hero btn-large">Download</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon" style="margin-left:3%"><span>5P</span></div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="insta">
+          <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="facebook">
+          <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+        <div class="linkedin">
+          <a href=" https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.</p>
+      </div>
+    </div>
+  </footer>
+
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+
+  <script>
+    // Elements
+    const menu = document.getElementById('primaryMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const mobileHeader = document.getElementById('mobilePanelHeader');
+    const dropdowns = Array.from(document.querySelectorAll('.dropdown[data-collapsible]'));
+    const mql = window.matchMedia('(max-width: 1024px)');
+
+    // Open/Close mobile panel
+    function openMenu(){
+      menu.classList.add('open');
+      openBtn.setAttribute('aria-expanded','true');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','true');
+      if (mobileHeader) mobileHeader.hidden = false;
+      document.body.classList.add('no-scroll');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      openBtn.setAttribute('aria-expanded','false');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','false');
+      if (mobileHeader) mobileHeader.hidden = true;
+      document.body.classList.remove('no-scroll');
+      // collapse all dropdowns when closing
+      dropdowns.forEach(d=>{
+        d.classList.remove('open');
+        const toggle = d.querySelector('.dropdown-toggle');
+        if (toggle){ toggle.setAttribute('aria-expanded','false'); }
+      });
+    }
+
+    openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    // Close when clicking outside of the panel on mobile
+    document.addEventListener('click', (e)=>{
+      if (!mql.matches) return;
+      if (!menu.classList.contains('open')) return;
+      const clickInside = menu.contains(e.target) || openBtn.contains(e.target);
+      if (!clickInside) closeMenu();
+    });
+
+    // Setup dropdowns for current viewport
+    function setupDropdowns(){
+      const isMobile = mql.matches;
+      dropdowns.forEach(drop=>{
+        const toggle = drop.querySelector('.dropdown-toggle');
+        if (!toggle) return;
+        // Remove old listeners by cloning
+        const newToggle = toggle.cloneNode(true);
+        toggle.parentNode.replaceChild(newToggle, toggle);
+        // Reset
+        newToggle.setAttribute('aria-expanded','false');
+        drop.classList.remove('open');
+
+        if (isMobile){
+          // Mobile: expand/collapse on click or keyboard
+          newToggle.addEventListener('click', (e)=>{
+            e.preventDefault(); e.stopPropagation();
+            const expanded = drop.classList.toggle('open');
+            newToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          });
+          newToggle.addEventListener('keydown', (e)=>{
+            if (e.key === 'Enter' || e.key === ' '){
+              e.preventDefault(); newToggle.click();
+            }
+          });
+          newToggle.addEventListener('touchstart', (e)=>{
+            e.preventDefault(); e.stopPropagation();
+            const expanded = drop.classList.toggle('open');
+            newToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          }, { passive:false });
+        } else {
+          drop.classList.remove('open');
+        }
+      });
+    }
+
+    // Initial setup and on resize
+    setupDropdowns();
+    mql.addEventListener('change', ()=>{
+      if (!mql.matches){ closeMenu(); }
+      setupDropdowns();
+    });
+
+    // Close panel on navigation click (mobile only)
+    document.querySelectorAll('.nav-menu a.nav-item, .nav-menu .dropdown-menu a').forEach(link=>{
+      link.addEventListener('click', ()=>{
+        if (mql.matches) closeMenu();
+      });
+    });
+
+    // Rotate arrows on expand (MutationObserver)
+    const observer = new MutationObserver(mutations=>{
+      mutations.forEach(m=>{
+        if (m.attributeName === 'class' && m.target.classList.contains('dropdown')){
+          const t = m.target.querySelector('.dropdown-toggle .dropdown-arrow');
+          if (t){
+            t.style.transform = m.target.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+            t.style.transition = 'transform .2s ease';
+          }
+        }
+      });
+    });
+    dropdowns.forEach(d=>observer.observe(d, {attributes:true}));
+  </script>
+</body>
+</html>
+```

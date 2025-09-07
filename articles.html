@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partner Profiles | 5th Pillar VIT</title>
+  <link rel="icon" type=".ico/.jpg/.png" href="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg">
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#1e3a8a;
+      --white:#fff;
+      --gray-50:#F8FAFC; --gray-100:#F1F5F9; --gray-200:#E2E8F0; --gray-300:#CBD5E1;
+      --gray-400:#94A3B8; --gray-500:#64748B; --gray-600:#475569; --gray-700:#334155; --gray-800:#1E293B; --gray-900:#0F172A;
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+      --radius:12px; --radius-sm:8px;
+      --nav-blue:#1e3a8a;
+      --menu-width:420px;
+    }
+    
+    :root{
+      /* Brand and neutrals */
+      --primary:#007BFF;
+      --primary-dark:#0056B3;
+      --democracy-blue:#0066CC;
+      --vit-gold:#FFB800;
+      --white:#FFFFFF;
+      --gray-50:#F8FAFC;
+      --gray-100:#F1F5F9;
+      --gray-200:#E2E8F0;
+      --gray-300:#CBD5E1;
+      --gray-400:#94A3B8;
+      --gray-500:#64748B;
+      --gray-600:#475569;
+      --gray-700:#334155;
+      --gray-800:#1E293B;
+      --gray-900:#0F172A;
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+      --container-max:1200px;
+      --radius:12px;
+      --radius-sm:8px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,Segoe UI,Arial,sans-serif;background:#f4f6f8;color:#333;line-height:1.6}
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none;transition:color .2s ease}
+
+    /* Fixed navbar */
+    .nav{
+      position:fixed; top:0; left:0; right:0; z-index:99999;
+      height:64px; background:var(--nav-blue);
+      display:flex; align-items:center; justify-content:space-between;
+      padding:0 .75rem;
+    }
+    .logo{display:flex; align-items:center; gap:.75rem}
+    .logo-icon{
+      width:56px; height:40px; border-radius:10px;
+      background:linear-gradient(135deg, #1e3a8a, #2563eb);
+      display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; box-shadow:var(--shadow-md);
+    }
+    .logo-icon span{font-size:1.25rem}
+    .logo-text h3{font-size:1rem; color:#fff; margin:0}
+    .logo-text p{font-size:.75rem; color:#e5ecf5; margin:0}
+
+    /* Toggle buttons */
+    .menu-toggle, .menu-close{
+      background:none; border:none; cursor:pointer;
+      width:40px; height:40px; border-radius:8px;
+      display:flex; align-items:center; justify-content:center;
+      color:#fff;
+    }
+    .menu-toggle:hover, .menu-close:hover{color:#eaf2ff}
+
+    /* Hide close on desktop */
+    @media (min-width:1025px){ .menu-toggle, .menu-close{ display:none } }
+
+    /* Desktop menu layout */
+    .nav-menu{
+      display:flex; align-items:center; gap:.25rem;
+    }
+    .menu-scroll{ display:flex; align-items:center; gap:.25rem; }
+
+    /* Items (desktop) */
+    .nav-item, .dropdown-toggle{
+      position:relative; display:flex; align-items:center; gap:.5rem;
+      padding:.5rem .9rem; border-radius:8px; border:none; cursor:pointer;
+      font-weight:600; color:#fff; background:var(--nav-blue);
+      transition: color .2s ease;
+      touch-action: manipulation; /* faster taps on touch devices */
+    }
+    /* Hover: text only becomes lighter blue; background stays same */
+    .nav-item:hover, .dropdown-toggle:hover{ color:#9cc2ff; background:var(--nav-blue); }
+    .dropdown{ position:relative; }
+    .dropdown-arrow{ font-size:.75rem; transition: transform .2s ease; }
+
+    /* Desktop dropdown menu (click-to-open only; no hover open) */
+    .dropdown-menu{
+      position:absolute; top:100%; left:0; min-width:220px;
+      background:#fff; border:1px solid var(--gray-200); border-radius:10px; box-shadow:var(--shadow-lg);
+      padding:.5rem; display:none; z-index:100001; /* above header */
+    }
+    .dropdown.open>.dropdown-menu{ display:block !important; }
+    @media (hover:hover){
+      .dropdown:hover>.dropdown-menu{ display:none !important; } /* disable hover-open on desktop */
+    }
+    .dropdown-menu a{ display:block; padding:.55rem .7rem; border-radius:8px; color:var(--gray-800); font-weight:500; }
+    .dropdown-menu a:hover{ color:var(--primary); background:var(--gray-100); }
+
+    /* Mobile / Tablet panel */
+    @media (max-width:1024px){
+      .nav{ padding:0 .5rem; }
+      .nav-menu{
+        position:fixed; top:0; right:0;
+        width:min(100vw, var(--menu-width)); height:100dvh;
+        background:#fff; border-left:1px solid var(--gray-200); box-shadow:var(--shadow-lg);
+        display:flex; flex-direction:column; transform:translateX(100%); transition:transform .28s ease;
+        overflow-y:auto; overflow-x:hidden; padding:0; z-index:100000;
+      }
+      .nav-menu.open{ transform:translateX(0) }
+      .mobile-panel-header{
+        position:sticky; top:0; z-index:1; height:64px; padding:0 12px;
+        background:#fff; border-bottom:1px solid var(--gray-200);
+        display:flex; align-items:center; justify-content:flex-end;
+      }
+      .menu-close{ display:flex; color:var(--gray-700) }
+      .menu-scroll{ display:flex; flex-direction:column; padding:12px 16px 20px 16px; gap:.25rem; }
+      .nav-item, .dropdown-toggle{ width:100%; justify-content:space-between; color:var(--gray-800); background:#fff; }
+      .dropdown-menu{ position:static; display:none; margin-top:.25rem; border-radius:8px; border:1px solid var(--gray-200); box-shadow:none; padding:.35rem; }
+      .dropdown.open>.dropdown-menu{ display:block; }
+    }
+
+    /* Focus styles */
+    .nav-item:focus, .dropdown-toggle:focus, .dropdown-menu a:focus, .menu-toggle:focus, .menu-close:focus{
+      outline:2px solid #60a5fa; outline-offset:2px;
+    }
+
+    /* Body lock when menu open (prevent background scroll) */
+    .no-scroll{ overflow:hidden; }
+
+    /* Hero */
+    .hero{ background:linear-gradient(90deg,#0055a5,#0077cc); color:#fff; text-align:center; padding:4rem 1rem; margin-top:64px; }
+    .badge{ display:inline-block; background:rgba(255,255,255,.9); color:#0055a5; padding:.5rem 1rem; border-radius:999px; font-weight:700; margin-bottom:1rem }
+    .title{ font-size:clamp(2rem,5vw,2.75rem); font-weight:800; margin-bottom:1rem }
+
+    /* Main */
+    .container{ max-width:1200px; margin:0 auto; padding:2rem 1rem; }
+    .card{ background:#fff; border-radius:.5rem; box-shadow:0 4px 12px rgba(0,0,0,.1); padding:2rem; }
+    .card-title{ font-size:1.5rem; font-weight:700; color:#0055a5; margin-bottom:1rem; }
+    .card p{ font-size:.95rem; color:#555; }
+
+    /* Partner cards grid (from earlier) */
+    .cards{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin:5%; margin-top:-2rem; }
+    .cd{ background:#fff; border-radius:20px; padding:1rem; display:flex; flex-direction:column; align-items:center; box-shadow:0 4px 10px rgba(0,0,0,.1); transition: transform .3s ease; }
+    .cd:hover{ transform: translateY(-5px); }
+    .cd img{ width:100%; max-width:250px; height:auto; object-fit:contain; margin-bottom:1rem; }
+    .p{ width:100%; text-align:justify; font-size:.95rem; line-height:1.5; }
+    .cd5 img, .cd6 img{ max-width:200px; }
+
+    @media (max-width:900px){
+      .cards{ grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width:768px){
+      .cards{ grid-template-columns: 1fr; margin-top:1rem; }
+      .p{ font-size:.9rem; }
+    }
+
+    /* Footer (keep container + links styles) */
+    .footer{ background: var(--gray-800); color:#fff; padding:3rem 0 1rem; }
+    .footer-content{ display:grid; grid-template-columns:1fr 2fr; gap:3rem; margin-bottom:2rem; margin-left:5%; }
+    .footer-brand .logo-text h3{ color: var(--primary); font-size:1.125rem; margin:0; }
+    .footer-brand .logo-text p{ color: var(--gray-400); font-size:.75rem; margin:0; }
+    .footer-brand p{ color: var(--gray-400); margin-top:1rem; }
+    .footer-links{ display:grid; grid-template-columns: repeat(3,1fr); gap:2rem; }
+    .footer-column h4{ color:#fff; font-size:1rem; margin-bottom:1rem; }
+    .footer-column a{ display:block; color: var(--gray-400); margin-bottom:.5rem; transition: color .3s ease; }
+    .footer-column a:hover{ color: var(--primary); }
+    .footer-column p{ color: var(--gray-400); margin-bottom:.25rem; }
+    .footer-bottom{ border-top:1px solid var(--gray-700); padding-top:1rem; text-align:center; color: var(--gray-400); font-size:.875rem; }
+
+    .links{ margin:5%; display:flex; flex-direction:row; justify-content:center; column-gap:10%; row-gap:20%; }
+    .fa-brands{ font-size:2.5rem; color:#ffffff; }
+    .fa-brands:hover{ text-shadow:4px 4px 20px rgba(36,160,237,.814); }
+
+    /* Buttons in hero card */
+    .btn{display:inline-flex; align-items:center; gap:.5rem; text-decoration:none;margin:5%}
+    .btn-hero{background:linear-gradient(135deg, var(--primary), var(--democracy-blue)); color:#fff; box-shadow:var(--shadow-md)}
+    .btn-large{font-size:1rem; min-width:150px; border-radius:10%}
+    .btn-hero:hover{box-shadow:var(--shadow-lg); transform:translateY(-2px)}
+
+    @media (max-width:1024px){ .footer-links{ grid-template-columns: repeat(2,1fr); } }
+    @media (max-width:640px){
+      .footer-links{ grid-template-columns:1fr; }
+      .container{ margin:4rem; }
+    }
+
+    .logo-img{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+    .logo-img img{height: clamp(28px, 5vw, 44px);width:auto;object-fit:contain;display:block}
+
+
+    @media (min-width:1024px){
+     .brand .logo-img img{
+        z-index:4000;
+     }    
+     .container1{
+        margin-left:10%;
+     }
+    }
+.hero .container{
+  margin-top:10%;
+}
+.header{
+position: fixed !important;
+top: 0;
+left: 0;
+right: 0;
+z-index: 99999 !important;
+}
+
+    /* Buttons in hero card */
+    .btn{display:inline-flex; align-items:center; gap:.5rem; text-decoration:none}
+    .btn-hero{background:linear-gradient(135deg, var(--primary), var(--democracy-blue)); color:#fff; box-shadow:var(--shadow-md)}
+    .btn-large{padding:1rem 2rem; font-size:1rem;  border-radius:10%}
+    .btn-hero:hover{box-shadow:var(--shadow-lg); transform:translateY(-2px)}
+
+
+
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <div class="nav" aria-label="Main navigation">
+    <a class="logo" href="#">
+           <span class="logo-img">
+            <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" 
+            alt="5th Pillar VIT"></span>  
+      <div class="logo-text">
+        <h3>5th Pillar VIT</h3>
+        <p>Students's Club</p>
+      </div>
+    </a>
+
+    <!-- Mobile open (hamburger) -->
+    <button class="menu-toggle" id="menuOpen" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Menu -->
+    <nav class="nav-menu" id="primaryMenu" role="navigation" aria-hidden="true">
+      <!-- Mobile panel header -->
+      <div class="mobile-panel-header" id="mobilePanelHeader" hidden>
+        <button class="menu-close" id="menuClose" aria-label="Close menu" aria-controls="primaryMenu" aria-expanded="true">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="menu-scroll">
+        <a href="index.html" class="nav-item">Home</a>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-about">
+            About Us <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-about" role="menu">
+            <a href="about/introduction.html">Club Introduction</a>
+            <a href="about/messages.html">Messages</a>
+            <a href="about/board.html">Board Members</a>
+            <a href="about/timeline.html">Timeline</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-events">
+            Events <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-events" role="menu">
+            <a href="events/calendar.html">Event Calendar</a>
+            <a href="events/highlights.html">Event Highlights</a>
+            <a href="events/collaborative.html">Collaborative Events</a>
+            <a href="events/archived.html">Archived Events</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-committees">
+            Committees <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-committees" role="menu">
+            <a href="committees/list.html">Committee List</a>
+            <a href="committees/activities.html">Committee Activities</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-blog">
+            Blog <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-blog" role="menu">
+            <a href="blog/newsletter.html">Annual Newsletter</a>
+            <a href="blog/hackathon.html">Hackathon Outputs</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-collab">
+            Collaborators <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-collab" role="menu">
+            <a href="collaborators/partners.html">Partner Profiles</a>
+            <a href="collaborators/speakers.html">Guest Speakers</a>
+            <a href="collaborators/partnership.html">Partnership Inquiry</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-gallery">
+            Gallery <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-gallery" role="menu">
+            <a href="gallery/photos.html">Photo Albums</a>
+            <a href="gallery/videos.html">Videos</a>
+            <a href="gallery/moments.html">Moments</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-outreach">
+            Outreach <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-outreach" role="menu">
+            <a href="outreach/projects.html">Projects</a>
+            <a href="outreach/alumni.html">Alumni Network</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-contact">
+            Contact <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-contact" role="menu">
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/register1.html">Join Our Club</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+        </div>
+
+        <div class="dropdown" data-collapsible>
+          <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="dd-resources">
+            Resources <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu" id="dd-resources" role="menu">
+            <a href="resources/legal.html">Legal Awareness</a>
+            <a href="resources/faq.html">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Collaborators & Guests</span>
+      <h1 class="title">Partner Profiles</h1>
+    </div>
+  </section>
+
+  <!-- Content intro -->
+  <main class="container">
+    <div class="card">
+      <div class="card-title">Our article blog</div>
+      <p> <strong> Our Article Blog is Shifted to other website </strong></p>
+         <div class="hero-buttons">
+        <a href="https://medium.com/@5thpillar"  class="btn btn-hero btn-large">Article Blog</a>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon" style="margin-left:3%"><span>5P</span></div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="insta"><a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></div>
+        <div class="facebook"><a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a></div>
+        <div class="linkedin"><a href=" https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a></div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.</p>
+      </div>
+    </div>
+  </footer>
+  
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+
+
+  <script>
+    // Elements
+    const body = document.body;
+    const menu = document.getElementById('primaryMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const mobileHeader = document.getElementById('mobilePanelHeader');
+    const dropdowns = Array.from(document.querySelectorAll('.dropdown[data-collapsible]'));
+    const mql = window.matchMedia('(max-width: 1024px)');
+
+    // Mobile open / close
+    function openMenu(){
+      menu.classList.add('open');
+      menu.setAttribute('aria-hidden','false');
+      openBtn.setAttribute('aria-expanded','true');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','true');
+      if (mobileHeader) mobileHeader.hidden = false;
+      body.classList.add('no-scroll');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      menu.setAttribute('aria-hidden','true');
+      openBtn.setAttribute('aria-expanded','false');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','false');
+      if (mobileHeader) mobileHeader.hidden = true;
+      body.classList.remove('no-scroll');
+      // collapse all dropdowns
+      dropdowns.forEach(d=>{
+        d.classList.remove('open');
+        const t=d.querySelector('.dropdown-toggle');
+        if(t) t.setAttribute('aria-expanded','false');
+      });
+    }
+    if (openBtn) openBtn.addEventListener('click', (e)=>{ e.preventDefault(); openMenu(); });
+    if (closeBtn) closeBtn.addEventListener('click', (e)=>{ e.preventDefault(); closeMenu(); });
+
+    // Click outside to close (mobile/tablet only)
+    document.addEventListener('click', (e)=>{
+      if (!mql.matches) return;
+      if (!menu.classList.contains('open')) return;
+      const clickInside = menu.contains(e.target) || openBtn.contains(e.target);
+      if (!clickInside) closeMenu();
+    });
+
+    // Wire dropdowns with a single pointer/click path to avoid double-trigger
+    function wireDropdown(drop){
+      const btn = drop.querySelector('.dropdown-toggle');
+      if (!btn) return;
+
+      // Remove old listeners by cloning (prevents stacking listeners on re-run)
+      const newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+
+      // Reset state
+      newBtn.setAttribute('aria-expanded','false');
+      drop.classList.remove('open');
+
+      const activate = (ev)=>{
+        ev.preventDefault();
+        ev.stopPropagation();
+        const willOpen = !drop.classList.contains('open');
+
+        // Close siblings to prevent multiple menus open (and shake)
+        const scope = menu; // operate within the main nav scope
+        scope.querySelectorAll('.dropdown.open').forEach(d=>{
+          if(d!==drop){
+            d.classList.remove('open');
+            const b=d.querySelector('.dropdown-toggle');
+            if(b) b.setAttribute('aria-expanded','false');
+          }
+        });
+
+        drop.classList.toggle('open', willOpen);
+        newBtn.setAttribute('aria-expanded', String(willOpen));
+      };
+
+      if (window.PointerEvent){
+        newBtn.addEventListener('pointerup', activate, {passive:false});
+      } else {
+        newBtn.addEventListener('click', activate);
+      }
+
+      // Keyboard support
+      newBtn.addEventListener('keydown', (e)=>{
+        if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); activate(e); }
+      });
+    }
+
+    function setupDropdowns(){ dropdowns.forEach(wireDropdown); }
+    setupDropdowns();
+
+    // Re-wire on breakpoint changes (also close menu when switching to desktop)
+    mql.addEventListener('change', ()=>{
+      if (!mql.matches){ closeMenu(); }
+      setupDropdowns();
+    });
+
+    // Close mobile drawer after a link click
+    document.querySelectorAll('.nav-menu a').forEach(a=>{
+      a.addEventListener('click', ()=>{ if (mql.matches) closeMenu(); });
+    });
+  </script>
+</body>
+</html>
