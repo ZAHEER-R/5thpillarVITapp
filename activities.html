@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Favicon -->
+  <link rel="icon" type=".ico/.jpg/.png" href="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Committee Activities – 5th Pillar VIT</title>
+
+  <style>
+    :root {
+      /* VIT Blue Theme Colors */
+      --primary: #007BFF;
+      --primary-dark: #0056B3;
+      --primary-light: #CCE7FF;
+      --democracy-blue: #0066CC;
+      --vit-gold: #FFB800;
+
+      /* Neutrals */
+      --white: #FFFFFF;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1E293B;
+      --gray-900: #0F172A;
+
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--democracy-blue));
+
+      /* Shadows */
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+      /* Typography */
+      --font-display: 'Playfair Display', serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+
+      /* Spacing */
+      --container-max-width: 1200px;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    /* Reset and Base Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { width: 100%; overflow-x: hidden; }
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--gray-800);
+      background: #f4f6f8;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; transition: color .2s ease; }
+
+    /* Utility Classes */
+    .container { max-width: var(--container-max-width); margin: 0 auto; padding: 0 1rem; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-header h2 { color: var(--primary); margin-bottom: 1rem; }
+    .section-header p { color: var(--gray-600); max-width: 600px; margin: 0 auto; }
+
+    /* Header / Navbar */
+    .header { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; height: 64px;
+      padding: 0 1rem; background-color: rgb(124, 157, 169);
+      position: sticky; top: 0; z-index: 1001;background:#0f2e75;
+    }
+
+    /* Brand */
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand .logo-img img { height: 40px; width: auto; object-fit: contain; border-radius: 6px; }
+    .brand .logo-text { line-height: 1; }
+    .brand .logo-text h3 { color: var(--primary); font-size: 1rem; margin: 0;width:10vw; }
+    .brand .logo-text p { color: var(--gray-500); font-size: 0.75rem; margin: 0; }
+
+    /* Toggle (mobile/tablet) */
+    .menu-toggle, .menu-close {
+      background: none; border: none; cursor: pointer; width: 40px; height: 40px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; color: var(--gray-800);
+    }
+    .menu-toggle:hover, .menu-close:hover { color: var(--primary); }
+    @media (min-width: 1025px) { .menu-toggle, .menu-close { display: none; } }
+
+    /* Nav menu container */
+    .nav-menu {
+      display: flex; align-items: center; background-color:#0f2e75; border-radius: 10px;
+    }
+    .header{
+      background-color:#0f2e75;
+    }
+    /* Desktop row layout */
+    @media (min-width: 1025px) {
+      .menu-scroll { display: flex; flex-direction: row; align-items: center; gap: .25rem; }
+      .mobile-panel-header { display: none; }
+    }
+
+    /* Items */
+
+    .nav-item, .dropdown-toggle {
+      position: relative; display: flex; align-items: center; gap: .5rem;
+      padding: .6rem .9rem; border-radius: 8px; font-weight: 600; cursor: pointer;
+      color:white; background-color:#0f2e75; border: none;
+      transition: color .2s ease, background .2s ease;
+    }
+    /* Keep white background; only text turns blue */
+    .nav-item:hover, .dropdown-toggle:hover { color: var(--primary); background: var(--white); }
+    .nav-item.active { color: var(--primary); background: var(--white); }
+
+    .dropdown { position: relative; }
+    .dropdown-arrow { font-size: .75rem; transition: transform .2s ease; }
+
+    /* Desktop submenu on hover */
+    .dropdown-menu {
+      position: absolute; top: 100%; left: 0; min-width: 220px; background: #fff; border: 1px solid var(--gray-200);
+      border-radius: 10px; padding: .5rem; display: none; z-index: 1100; box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 1025px) {
+      .dropdown:hover > .dropdown-menu { display: block; }
+      .dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    }
+    .dropdown-menu a {
+      display: block; padding: .6rem .75rem; border-radius: 8px; color: var(--gray-700); font-weight: 500; background: #fff;
+      transition: color .2s ease, background .2s ease;
+    }
+    .dropdown-menu a:hover { background: #fff; color: var(--primary); }
+
+    /* Mobile / Tablet drawer */
+    @media (max-width: 1024px) {
+      .nav-menu {
+        position: fixed; top: 0; right: 0; width: min(82vw, 420px); max-width: 100vw;
+        height: 100vh; height: 100dvh; max-height: 100dvh;
+        padding: 0; background: #fff; border-left: 1px solid var(--gray-200);
+        flex-direction: column; align-items: stretch;
+        transform: translateX(100%); transition: transform .28s ease, opacity .2s ease; opacity: 0;
+        overflow-y: auto; overscroll-behavior: contain; z-index: 1100;
+      }
+
+      .nav-item{
+        background-color: white;
+        color:#0077cc;
+      }
+      .nav-menu.open { transform: translateX(0); opacity: 1; }
+
+      .mobile-panel-header {
+        position: sticky; top: 0; z-index: 1; height: 64px; background: #fff;
+        border-bottom: 1px solid var(--gray-200); display: flex; align-items: center; justify-content: flex-end; padding: 0 12px;
+      }
+      .menu-scroll { display: flex; flex-direction: column; gap: .25rem; padding: 12px 16px 20px 16px; }
+
+      .nav-item, .dropdown-toggle { width: 100%; justify-content: space-between; color: var(--gray-800); background-color:white; }
+      .nav-item + .nav-item, .dropdown + .dropdown { margin-top: .25rem; }
+
+      /* Mobile dropdowns via .open */
+      .dropdown-menu {
+        position: static; display: none; margin-top: .25rem; border-radius: 8px; border: 1px solid var(--gray-200);
+        box-shadow: none; padding: .35rem;
+      }
+      .dropdown.open > .dropdown-menu { display: block; }
+    }
+
+    /* Hero */
+    .hero { background: linear-gradient(to right, #0055a5, #0077cc); color: white; padding: 4rem 1rem; text-align: center; }
+    .badge { display: inline-block; background: rgba(255,255,255,0.9); color: #0055a5; padding: 0.5rem 1rem; border-radius: 999px; font-weight: bold; margin-bottom: 1rem; }
+    .title { font-size: 2.5rem; font-weight: bold; margin-bottom: 1rem; }
+    .subtitle { font-size: 1.2rem; opacity: 0.9; }
+
+    /* Content */
+    .page-section { max-width: 960px; margin: 0 auto; padding: 2rem 1rem; }
+    .card {
+      background: white; border-radius: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); padding: 2rem; text-align: left;
+    }
+    .card h3 { font-size: 1.25rem; font-weight: bold; margin-bottom: 1rem; }
+    .card p { font-size: 0.95rem; color: #666; }
+
+    .topic strong { color: #0066CC; display: inline-block; margin: .5rem 0; }
+    .p { font-size: 1.1rem; }
+
+    /* Photos grid */
+    .photos { margin-top: 3rem; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .cd { width: 100%; height: 50vh; background-color: white; border-radius: 20px; overflow: hidden; }
+    .cd img { width: 100%; height: 100%; object-fit: cover; }
+
+    @media (max-width: 900px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .cd { height: 40vh; }
+    }
+    @media (max-width: 600px) {
+      .cards { grid-template-columns: 1fr; }
+      .cd { height: 40vh; }
+    }
+
+    /* Footer */
+    .footer { background: var(--gray-800); color: white; padding: 3rem 0 1rem; display: flow-root; }
+    .footer-content { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; margin-bottom: 2rem; margin-left: 5%; }
+    .footer-brand .logo-text h3 { color: var(--primary); font-size: 1.125rem; margin: 0; }
+    .footer-brand .logo-text p { color: var(--gray-400); font-size: 0.75rem; margin: 0; }
+    .footer-brand p { color: var(--gray-400); margin-top: 1rem; }
+    .footer-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .footer-column h4 { color: white; font-size: 1rem; margin-bottom: 1rem; }
+    .footer-column a { display: block; color: var(--gray-400); margin-bottom: 0.5rem; transition: color 0.3s ease; }
+    .footer-column a:hover { color: var(--primary); }
+    .footer-column p { color: var(--gray-400); margin-bottom: 0.25rem; }
+    .links { margin: 5%; display: flex; flex-direction: row; justify-content: center; row-gap: 20%; column-gap: 10%; }
+    .fa-brands { font-size: 2.5rem; color: #0f2e75; }
+    .fa-brands:hover { text-shadow: 4px 4px 20px rgba(36, 160, 237, 0.814); }
+    .footer-bottom { border-top: 1px solid var(--gray-700); padding-top: 1rem; text-align: center; color: var(--gray-400); font-size: 0.875rem; display: flow-root; }
+    .footer-bottom p { margin: 0; }
+    /* Footer */
+    .footer {
+        background: var(--gray-800);
+        color: white;
+        padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        margin-left:5%;
+    }
+
+    .footer-brand .logo-text h3 {
+        color: var(--primary);
+        font-size: 1.125rem;
+        margin: 0;
+    }
+
+    .footer-brand .logo-text p {
+        color: var(--gray-400);
+        font-size: 0.75rem;
+        margin: 0;
+    }
+
+    .footer-brand p {
+        color: var(--gray-400);
+        margin-top: 1rem;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-column h4 {
+        color: white;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-column a {
+        display: block;
+        color: var(--gray-400);
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+        color: var(--primary);
+    }
+
+    .footer-column p {
+        color: var(--gray-400);
+        margin-bottom: 0.25rem;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid var(--gray-700);
+        padding-top: 1rem;
+        text-align: center;
+        color: var(--gray-400);
+        font-size: 0.875rem;
+    }
+    @media(min-width:640px){
+        .card{
+            transform: scale(0.8);
+        }
+      
+        .cards{
+            margin:5%;
+      
+        }
+        .us{
+        margin-top:10%;
+        }
+        .nav-item{
+          background:#fff;
+        }
+    }
+    @media(max-width:767px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .container{
+            margin-top:10%;
+        }
+        .card{
+            transform: scale(0.8);
+        }
+
+        .cards{
+            margin:5%;
+        }
+          .nav-item{
+          background:#fff;
+        }
+    }
+    .nav-item{
+        text-decoration: none;
+    }
+    .nav-menu{
+      width:105vw;
+      margin-right:-5%;
+      height:650vh;
+    }
+    .nav-item:hover{
+          border: 2px solid rgb(36, 128, 234);
+          
+    }
+    a{
+        text-decoration: none;
+    }
+
+    @media(max-width:599px){
+        .card{
+            transform: scale(0.8);
+        }
+        .us{
+        margin-top:20%;
+        }
+        .cards{
+            margin:5%;
+        }
+                .nav-item{
+          background:#fff;
+        }
+
+    }
+    @media(max-width:1024px){
+    .card{
+        height:30vh;
+        width:40vh;
+    }
+    .cards{
+        display:grid;
+        margin-top:-15%;
+        grid-template-columns: repeat(2,1fr);
+        transform:scale(0.9);
+        row-gap: 1rem;
+    }
+    .cd img{
+        transform:scale(0.8);
+        width:-10%;
+    }
+    .details{
+        height:70vh;
+        transform: scale(1);
+        margin-left:20%;
+    }
+
+    }
+
+    @media(max-width:472px){
+        .footer-links{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .container{
+            margin-top:20%;
+        }
+            .card{
+        height:30vh;
+        width:40vh;
+    }
+        .details1{
+        height:80vh;
+        transform: scale(0.9);
+        margin-left:5%;
+    }
+        .cd img{
+        transform:scale(0.6);
+        width:-10%;
+    }
+    .photos{
+     margin-left:0%;
+     transform: scale(1.1);
+    }
+    .cards{
+        display:grid;
+        margin-top:200%;
+        grid-template-columns: repeat(1,1fr);
+        transform:scale(0.9);
+        row-gap: 1rem;
+    }
+    }
+
+      @media(min-width:375px){
+        .photos{
+            margin-left: 9%;
+
+        }
+        .details{
+            height:280vh;
+        }
+      }
+    .nav-item{
+        text-decoration: none;
+    }
+.hero .container{
+  margin-top:10%;
+}
+.header{
+position: fixed !important;
+top: 0;
+left: 0;
+right: 0;
+z-index: 99999 !important;
+background-color:#0f2e75;
+}
+
+    .nav-menu{
+      width:105vw;
+      margin-right:-5%;
+      height:350vh;
+      
+    }
+    .nav-item:hover{
+          border: 2px solid rgb(36, 128, 234);
+    }
+    a{
+        text-decoration: none;
+    }
+    .fa-brands{
+      color:#ffffff;
+    }
+
+    .logo-img{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+    .logo-img img{height: clamp(28px, 5vw, 44px);width:auto;object-fit:contain;display:block}
+
+    @media (max-width: 1024px) { .footer-links { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .footer-content { grid-template-columns: 1fr; gap: 2rem; } .footer-links { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .container { padding: 0 0.75rem; } }
+
+    /* Focus outline */
+    .nav-item:focus, .dropdown-toggle:focus, .dropdown-menu a:focus, .menu-toggle:focus, .menu-close:focus {
+      outline: 2px solid var(--primary); outline-offset: 2px;
+    }
+
+    /* Page spacing under fixed/sticky nav */
+    main { margin-top: 12px; }
+
+    /* ===== Added overrides: keep all original lines, only improve behavior ===== */
+    /* Make header/nav blue without removing original line */
+    .brand .logo-text h3 { color: #fff; }
+    .brand .logo-text p { color: #eaf0ff; }
+
+    /* Force mobile drawer to fit screen width/height despite earlier 105vw/350vh rules */
+    @media (max-width:1024px){
+      .nav-menu{  max-width:100vw !important; height:100dvh !important; margin-right:0 !important; opacity:0; }
+      .nav-menu.open{ opacity:1; }
+    }
+    @media (min-width:1025px){
+      .nav-menu{ width:auto !important; height:auto !important; margin-right:0 !important; }
+    }
+
+    /* Show a visible × on the close button while keeping existing icon line */
+    .mobile-panel-header .menu-close i{ display:none; }
+    .mobile-panel-header .menu-close::before{
+      content:"×"; font-size:24px; line-height:1; font-weight:700; color: var(--gray-800);
+    }
+    .mobile-panel-header .menu-close:hover::before{ color: var(--primary); }
+
+    /* ===== Precise 412px fix: remove gap between .details and .photos without deleting lines ===== */
+    @media (width: 412px){
+      /* The big gap is caused by very tall .details and huge .cards margin-top at <=472px; reset just at 412px */
+      .details{ height:auto !important; transform:none !important; margin-bottom:0 !important; }
+      .photos{ margin-top:0 !important; margin-left:0 !important; }
+      .cards{ margin-top:0 !important; }
+      /* Optional: slightly tighten page section padding at this exact width */
+      .page-section{ padding-bottom:0 !important; }
+    }
+        html{
+        user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav" aria-label="Main navigation">
+      <!-- Brand -->
+      <a class="brand" href="index1.html" aria-label="5th Pillar VIT">
+        <span class="logo-img">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" alt="5th Pillar VIT">
+        </span>
+        <span class="logo-text">
+          <h3>5th Pillar VIT</h3>
+          <p>Students's Club</p>
+        </span>
+      </a>
+
+      <!-- Hamburger -->
+      <button class="menu-toggle" id="menuOpen" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Drawer / Desktop menu -->
+      <nav class="nav-menu" id="primaryMenu" aria-hidden="true">
+        <!-- Mobile header with X close (hidden on desktop via CSS) -->
+        <div class="mobile-panel-header">
+          <button class="menu-close" id="menuClose" aria-label="Close menu" aria-controls="primaryMenu" aria-expanded="true">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="menu-scroll">
+          <a href="index1.html" class="nav-item active">Home</a>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-about">
+              About Us <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-about" role="menu">
+              <a href="about/introduction.html">Club Introduction</a>
+              <a href="about/messages.html">Messages</a>
+              <a href="about/board.html">Board Members</a>
+              <a href="about/timeline.html">Timeline</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-events">
+              Events <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-events" role="menu">
+              <a href="events/calendar.html">Event Calendar</a>
+              <a href="events/highlights.html">Event Highlights</a>
+              <a href="events/collaborative.html">Collaborative Events</a>
+              <a href="events/archived.html">Archived Events</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-committees">
+              Committees <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-committees" role="menu">
+              <a href="committees/list.html">Committee List</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-blog">
+              Blog <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-blog" role="menu">
+              <a href="blog/articles.html">Blog Articles</a>
+              <a href="blog/newsletter.html">Annual Newsletter</a>
+              <a href="blog/hackathon.html">Hackathon Outputs</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-collab">
+              Collaborators <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-collab" role="menu">
+              <a href="collaborators/partners.html">Partner Profiles</a>
+              <a href="collaborators/speakers.html">Guest Speakers</a>
+              <a href="collaborators/partnership.html">Partnership Inquiry</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-gallery">
+              Gallery <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-gallery" role="menu">
+              <a href="gallery/photos.html">Photo Albums</a>
+              <a href="gallery/videos.html">Videos</a>
+              <a href="gallery/moments.html">Moments</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-outreach">
+              Outreach <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-outreach" role="menu">
+              <a href="outreach/projects.html">Projects</a>
+              <a href="outreach/alumni.html">Alumni Network</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-contact">
+              Contact <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-contact" role="menu">
+              <a href="get-involved/register.html">Event Registration</a>
+              <a href="get-involved/register1.html">Join Our Club</a>
+              <a href="get-involved/feedback.html">Feedback</a>
+            </div>
+          </div>
+
+          <div class="dropdown" data-collapsible>
+            <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="submenu-resources">
+              Resources <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-menu" id="submenu-resources" role="menu">
+              <a href="resources/legal.html">Legal Awareness</a>
+              <a href="resources/faq.html">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Committees</span>
+      <h1 class="title">Committee Activities</h1>
+      <p class="subtitle">Discover the ongoing projects and initiatives of each committee</p>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="page-section">
+    <div class=" details1">
+      <div class="topic">
+        <strong>Events Department</strong>
+        <p>
+          7 COLLABORATIONS, 25+ ARTICLES. Topped number of events chart (among all clubs and chapters) with 26 events till July, 2023. Conducted 75 events through the tenure 2023-24. Total events: 75, Riviera 2023: 5, Gravitas 2023: 1, Collaborative events: 4. Conducted informative sessions, group discussions, quizzes, hackathons, ideathons, etc., and updated all reports on time. Wide range of topics included stigmatized areas requiring awareness; some events had national-level external participants. Specialized events: Campaign Against Substance Abuse; Alumni Event; Sustainable Development Goals; Outreach Event. “Law and You” series was started to raise legal awareness.
+        </p>
+      </div>
+
+      <div class="topic">
+        <strong>Editorial Department</strong>
+        <p>
+          Migration of Fifth Pillar’s Blog from WordPress to Medium (preserving 200+ articles). Published 25+ new articles. Instituted a yearly Newsletter. Published reviewed works from hackathons and ideathons. Link: [https://medium.com/@5thpillar](https://medium.com/@5thpillar)
+        </p>
+      </div>
+
+      <div class="topic">
+        <strong>Technical Department</strong>
+        <p>
+          Integrates the club’s technical stack, manages websites and registrations, and maintains apps. Focuses on security and user-friendly experiences across web and apps. Feedback and improvement requests can be sent via the feedback page.
+        </p>
+      </div>
+
+      <div class="topic">
+        <strong>Design Department</strong>
+        <p>
+          Designs posts, photos, and videos, and manages social media content (Instagram, Facebook, LinkedIn). Contributes to yearly newsletters and articles publishing. Follow for updates to join upcoming initiatives.
+        </p>
+      </div>
+
+      <div class="topic">
+        <strong>Finance Department</strong>
+        <p>
+          Plans events, hackathons, and projects within budget, and welcomes collaborators and partners to drive impact.
+        </p>
+      </div>
+
+      <div class="topic">
+        <strong>Outreach Department</strong>
+        <p>
+          Markets club initiatives and events, hackathons, and articles to VIT Vellore students and beyond.
+        </p>
+      </div>
+    </div>
+
+    <div class="photos">
+      <div class="cards">
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community1.png" alt="photo1">
+        </div>
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community2.png" alt="photo2">
+        </div>
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community3.png" alt="photo3">
+        </div>
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community4.png" alt="photo4">
+        </div>
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\community5.jpg" alt="photo5">
+        </div>
+        <div class="cd">
+          <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\ppi1.png" alt="photo6">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="display:flex;align-items:center;gap:.75rem;text-decoration:none">
+            <div class="logo-icon" style="width:56px;height:40px;border-radius:10px;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow-md)">
+              <span>5P</span>
+            </div>
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="insta">
+          <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="facebook">
+          <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+        <div class="linkedin">
+          <a href=" https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.</p>
+      </div>
+    </div>
+  </footer>
+  
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+
+
+  <!-- Script: drawer + dropdowns -->
+  <script>
+    (function(){
+      const menu = document.getElementById('primaryMenu');
+      const openBtn = document.getElementById('menuOpen');
+      const closeBtn = document.getElementById('menuClose');
+      const mql = window.matchMedia('(max-width: 1024px)');
+      const dropdowns = Array.from(document.querySelectorAll('.dropdown[data-collapsible]'));
+
+      function openMenu(){
+        menu.classList.add('open');
+        openBtn.setAttribute('aria-expanded','true');
+        menu.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu(){
+        menu.classList.remove('open');
+        openBtn.setAttribute('aria-expanded','false');
+        menu.setAttribute('aria-hidden','true');
+        document.body.style.overflow = '';
+        // collapse all dropdowns
+        dropdowns.forEach(d=>{
+          d.classList.remove('open');
+          const t = d.querySelector('.dropdown-toggle');
+          if (t) t.setAttribute('aria-expanded','false');
+        });
+      }
+
+      openBtn.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+      // Click outside to close on mobile
+      document.addEventListener('click', (e)=>{
+        if (!mql.matches) return;
+        if (!menu.classList.contains('open')) return;
+        const inside = menu.contains(e.target) || openBtn.contains(e.target);
+        if (!inside) closeMenu();
+      });
+
+      // Setup mobile dropdown toggles (desktop handled by CSS hover)
+      function setupDropdowns(){
+        const isMobile = mql.matches;
+        dropdowns.forEach(drop=>{
+          const oldToggle = drop.querySelector('.dropdown-toggle');
+          if (!oldToggle) return;
+          const toggle = oldToggle.cloneNode(true);
+          oldToggle.parentNode.replaceChild(toggle, oldToggle);
+
+          toggle.setAttribute('aria-expanded','false');
+          drop.classList.remove('open');
+
+          if (isMobile){
+            toggle.addEventListener('click', (e)=>{
+              e.preventDefault();
+              e.stopPropagation();
+              const expanded = drop.classList.toggle('open');
+              toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+              const arrow = toggle.querySelector('.dropdown-arrow');
+              if (arrow){ arrow.style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)'; }
+            });
+            toggle.addEventListener('keydown', (e)=>{
+              if (e.key === 'Enter' || e.key === ' '){
+                e.preventDefault();
+                toggle.click();
+              }
+            });
+          }
+        });
+      }
+
+      setupDropdowns();
+      mql.addEventListener('change', ()=>{
+        if (!mql.matches){ closeMenu(); }
+        setupDropdowns();
+      });
+
+      // Close drawer after link clicks (mobile only)
+      menu.addEventListener('click', (e)=>{
+        if (!mql.matches) return;
+        const a = e.target.closest('a');
+        if (a) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Committee List – 5th Pillar VIT</title>
+  <script src="https://kit.fontawesome.com/efc246ce45.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="icon" href="images/5pillar.jpg"/>
+
+  <style>
+    :root{
+      /* Brand */
+      --primary:#007BFF;
+      --primary-dark:#0056B3;
+      --democracy-blue:#0066CC;
+      --vit-gold:#FFB800;
+
+      /* Neutrals */
+      --white:#FFFFFF;
+      --gray-50:#F8FAFC;
+      --gray-100:#F1F5F9;
+      --gray-200:#E2E8F0;
+      --gray-300:#CBD5E1;
+      --gray-400:#94A3B8;
+      --gray-500:#64748B;
+      --gray-600:#475569;
+      --gray-700:#334155;
+      --gray-800:#1E293B;
+      --gray-900:#0F172A;
+
+      /* Gradients + Shadows */
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--democracy-blue));
+      --shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);
+
+      --container-max:1200px;
+      --radius:12px;
+      --radius-sm:8px;
+    }
+
+    /* Base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    html,body{width:100%;overflow-x:hidden}
+    body{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.6;color:var(--gray-800);background:var(--white);
+    }
+    img{max-width:100%;display:block;height:auto}
+    a{color:inherit;text-decoration:none;transition:color .2s ease}
+
+    .container{max-width:var(--container-max);padding:0 1rem;margin-left:5%;}
+   .matter{
+    margin-left:-5%
+   }
+    /* Header / Navbar */
+    .header{
+      position:sticky;top:0;z-index:1000;
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--gray-200);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;height:64px;
+    }
+
+    /* Logo */
+    .logo{display:flex;align-items:center;gap:.75rem}
+    .logo-icon{
+      width:56px;height:40px;border-radius:10px;background:var(--gradient-primary);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;box-shadow:var(--shadow-md)
+    }
+    .logo-icon span{font-size:1.25rem}
+    .logo-text h3{font-size:0.85rem;color:var(--primary);margin:0;width:10vw;}
+    .logo-text p{font-size:.75rem;color:#007BFF;margin:0}
+
+    /* Desktop nav container */
+    .nav-menu{
+      display:flex;align-items:center;gap:.25rem;background:var(--white);border-radius:10px;
+    }
+
+    /* Row layout on desktop */
+    @media (min-width:1025px){
+      .menu-scroll{display:flex;flex-direction:row;align-items:center;gap:.25rem}
+      .mobile-panel-header{display:none}
+      .container{max-width:var(--container-max);padding:0 1rem;margin-left:5%;}
+
+      .nav-menu{position:static;transform:none;overflow:visible;width:auto;height:auto;box-shadow:none;border-left:none;background-color: #0f2e75;}
+    }
+
+    /* Items */
+    .nav-item, .dropdown-toggle{
+      position:relative;display:flex;align-items:center;gap:.5rem;
+      padding:.6rem .9rem;border-radius:8px;font-weight:600;cursor:pointer;
+      color:white;background:#0f2e75;border:none;
+      transition:color .2s ease, background .2s ease;
+    }
+    /* White bg, blue text on hover/active */
+    .nav-item:hover, .dropdown-toggle:hover{color:var(--primary);background:var(--white)}
+    .nav-item.active{color:#0f2e75;background:var(--white)}
+
+    .dropdown{position:relative}
+    .dropdown-arrow{font-size:.75rem;transition:transform .2s ease}
+
+    /* Desktop: hover opens submenu */
+    .dropdown-menu{
+      position:absolute;top:100%;left:0;min-width:220px;
+      background:#fff;border:1px solid var(--gray-200);border-radius:10px;box-shadow:var(--shadow-lg);
+      padding:.5rem;display:none;z-index:1001;
+    }
+    
+    @media (min-width:1025px){
+      .dropdown:hover>.dropdown-menu{display:block}
+      .dropdown:hover .dropdown-arrow{transform:rotate(180deg)}
+    }
+    .dropdown-menu a{
+      display:block;padding:.6rem .75rem;border-radius:8px;color:var(--gray-700);font-weight:500;
+      transition:color .2s ease, background .2s ease;
+    }
+    /* Keep white background; only text turns blue */
+    .dropdown-menu a:hover{background:#fff;color:var(--primary)}
+
+    /* Mobile / Tablet panel */
+    .menu-toggle, .menu-close{
+      background:none;border:none;cursor:pointer;width:40px;height:40px;border-radius:8px;
+      display:flex;align-items:center;justify-content:center;color:white;
+    }
+    .menu-toggle:hover, .menu-close:hover{color:var(--primary)}
+    @media (min-width:1025px){
+      .menu-toggle, .menu-close{display:none}
+    }
+
+    @media (max-width:1024px){
+      .nav-menu{
+        position:fixed;top:0;right:0;
+        height:100vh;         /* fallback */
+        height:100dvh;        /* dynamic viewport for mobile toolbars */
+        max-height:100dvh;
+        width:min(100vw, 420px);
+        background:#fff;box-shadow:var(--shadow-lg);
+        padding:0;display:flex;flex-direction:column;transform:translateX(100%);
+        overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain; /* stop scroll chaining */
+        transition:transform .28s ease;border-left:1px solid var(--gray-200);
+      }
+      .nav-menu.open{transform:translateX(0)}
+
+      .mobile-panel-header{
+        position:sticky;top:0;z-index:1;height:64px;background:#fff;
+        border-bottom:1px solid var(--gray-200);display:flex;align-items:center;justify-content:flex-end;padding:0 12px;
+      }
+
+      .menu-scroll{display:flex;flex-direction:column;gap:.25rem;padding:12px 16px 20px 16px}
+
+      .nav-item, .dropdown-toggle{width:100%;justify-content:space-between;background:#fff;border:none;color:var(--gray-800)}
+      .nav-item + .nav-item, .dropdown + .dropdown{margin-top:.25rem}
+
+      /* Mobile dropdowns: collapsed by default, open by JS via .open */
+      .dropdown-menu{
+        position:static;display:none;margin-top:.25rem;border-radius:8px;border:1px solid var(--gray-200);
+        box-shadow:none;padding:.35rem;
+      }
+      .dropdown.open>.dropdown-menu{display:block}
+    }
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(135deg, var(--primary), var(--democracy-blue));
+      color:#fff;padding:48px 0;text-align:center;
+    }
+    .badge{
+      display:inline-block;background:rgba(255,255,255,.9);color:var(--primary);
+      padding:.5rem 1rem;border-radius:999px;font-weight:700;margin-bottom:1rem;
+    }
+    .title{font-size:2.5rem;font-weight:800;margin-bottom:.5rem}
+    .subtitle{font-size:1.1rem;opacity:.95}
+
+    /* Cards / Grid */
+    .grid{display:grid;grid-template-columns:1fr;gap:2rem}
+    @media (min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+
+    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow-md);padding:1.5rem;transition:box-shadow .2s ease}
+    .card:hover{box-shadow:0 6px 20px rgba(0,0,0,.12)}
+    .card-title{font-size:1.35rem;font-weight:800;color:var(--primary);margin-bottom:.5rem}
+    .card-description{font-size:.95rem;color:var(--gray-600);margin-bottom:1rem}
+
+    .section-title{font-weight:800;margin-bottom:.75rem}
+    .badge-id{background:#e0e7ff;color:#333;padding:.25rem .75rem;border-radius:999px;font-size:.75rem;font-weight:700}
+    .role-box{background:#f5f7fb;padding:1rem;border-radius:10px;display:flex;align-items:center;justify-content:space-between;margin-bottom:.6rem}
+    .role-box span{font-weight:700;display:block;margin-bottom:.25rem}
+    .activity-list{list-style:none;margin:0;padding:0}
+    .activity-list li{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.45rem;color:#555;font-size:.92rem}
+    .activity-list li::before{content:"";width:8px;height:8px;background:var(--primary);border-radius:50%;margin-top:.45rem;flex-shrink:0}
+
+    /* Footer (preserve classes) */
+    .footer{background:var(--gray-800);color:#fff;padding:3rem 0 1rem;margin-top:2rem}
+    .footer-content{display:grid;grid-template-columns:1fr 2fr;gap:3rem;margin-bottom:2rem;margin-left:5%}
+    .footer-brand .logo-text h3{color:var(--primary);font-size:1.125rem;margin:0}
+    .footer-brand .logo-text p{color:var(--gray-400);font-size:.75rem;margin:0}
+    .footer-brand p{color:var(--gray-400);margin-top:1rem}
+    .footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+    .footer-column h4{color:#fff;font-size:1rem;margin-bottom:1rem}
+    .footer-column a{display:block;color:var(--gray-400);margin-bottom:.5rem;transition:color .2s ease}
+    .footer-column a:hover{color:var(--primary)}
+    .footer-column p{color:var(--gray-400);margin-bottom:.25rem}
+    .footer-bottom{border-top:1px solid var(--gray-700);padding-top:1rem;text-align:center;color:var(--gray-400);font-size:.875rem}
+    @media(max-width:640px){.footer-links{grid-template-columns:repeat(2,1fr)}}
+
+    /* Social links row (preserve) */
+    .links{margin:5%;display:flex;flex-direction:row;justify-content:center;row-gap:20%;column-gap:10%}
+    .fa-brands{font-size:2.2rem;color:#ffffff}
+    .fa-brands:hover{text-shadow:4px 4px 20px rgba(36,160,237,.8)}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    /* FIX: keep logo image reasonable and prevent overflow */
+    .logo-img{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;}
+    .logo-img img{height: clamp(28px, 5vw, 44px);width:auto;object-fit:contain;display:block}
+
+    /* Focus */
+    .nav-item:focus, .dropdown-toggle:focus, .dropdown-menu a:focus, .menu-toggle:focus, .menu-close:focus{
+      outline:2px solid var(--primary);outline-offset:2px;
+    }
+.hero .container{
+  margin-top:10%;
+}
+.header{
+position: fixed !important;
+top: 0;
+left: 0;
+right: 0;
+z-index: 99999 !important;
+background:#0f2e75;
+}
+
+    html{
+        user-select: none;
+    }
+    /* Body lock when menu open */
+    .no-scroll{overflow:hidden}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+
+            <span class="logo-img">
+              <img src="C:\Users\z4pro\OneDrive\Desktop\5p\Images\5pillar.jpg" alt="5th Pillar VIT">
+            </span>
+          <div class="logo-text">
+            <h3>5th Pillar VIT</h3>
+            <p>Students's Club</p>
+          </div>
+        
+
+        <!-- Toggle only on mobile/tablet -->
+        <button class="menu-toggle" id="menuOpen" aria-label="Open menu" aria-controls="primaryMenu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Nav -->
+        <div class="nav-menu" id="primaryMenu">
+          <!-- Mobile header with close X -->
+          <div class="mobile-panel-header">
+            <button class="menu-close" id="menuClose" aria-label="Close menu" aria-controls="primaryMenu" aria-expanded="true">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="menu-scroll">
+            <a href="index1.html" class="nav-item active">Home</a>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-about">
+                About Us <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-about" role="menu">
+                <a href="about/introduction.html">Club Introduction</a>
+                <a href="about/messages.html">Messages</a>
+                <a href="about/board.html">Board Members</a>
+                <a href="about/timeline.html">Timeline</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-events">
+                Events <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-events" role="menu">
+                <a href="events/calendar.html">Event Calendar</a>
+                <a href="events/highlights.html">Event Highlights</a>
+                <a href="events/collaborative.html">Collaborative Events</a>
+                <a href="events/archived.html">Archived Events</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-committees">
+                Committees <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-committees" role="menu">
+                <a href="committees/list.html">Committee List</a>
+                <a href="committees/activities.html">Committee Activities</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-blog">
+                Blog <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-blog" role="menu">
+                <a href="blog/articles.html">Blog Articles</a>
+                <a href="blog/newsletter.html">Annual Newsletter</a>
+                <a href="blog/hackathon.html">Hackathon Outputs</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-collab">
+                Collaborators <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-collab" role="menu">
+                <a href="collaborators/partners.html">Partner Profiles</a>
+                <a href="collaborators/speakers.html">Guest Speakers</a>
+                <a href="collaborators/partnership.html">Partnership Inquiry</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-gallery">
+                Gallery <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-gallery" role="menu">
+                <a href="gallery/photos.html">Photo Albums</a>
+                <a href="gallery/videos.html">Videos</a>
+                <a href="gallery/moments.html">Moments</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-outreach">
+                Outreach <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-outreach" role="menu">
+                <a href="outreach/projects.html">Projects</a>
+                <a href="outreach/alumni.html">Alumni Network</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-contact">
+                Contact <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-contact" role="menu">
+                <a href="get-involved/register1.html">Join Our Club</a>
+                <a href="get-involved/feedback.html">Feedback</a>
+              </div>
+            </div>
+
+            <div class="dropdown" data-collapsible>
+              <button class="dropdown-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-resources">
+                Resources <span class="dropdown-arrow">▼</span>
+              </button>
+              <div class="dropdown-menu" id="submenu-resources" role="menu">
+                <a href="resources/legal.html">Legal Awareness</a>
+                <a href="resources/faq.html">FAQ</a>
+              </div>
+            </div>
+          </div><!-- /.menu-scroll -->
+        </div><!-- /.nav-menu -->
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Committees</span>
+      <h1 class="title">Committee List</h1>
+      <p class="subtitle">Explore our four specialized committees and their leadership structure</p>
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main class="container">
+    <div class="grid" id="committeeGrid"></div>
+  </main>
+
+  <div class="container" style="display:flex;justify-content:center;margin:24px 0">
+    <div class="links" style="margin:0">
+      <a href="about/board.html" class="nav-item" style="border:1px solid var(--gray-200);border-radius:999px;padding:.5rem 1rem">Visit Board</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container matter">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-text">
+              <h3>5th Pillar VIT</h3>
+              <p>Students's Club</p>
+            </div>
+          </a>
+          <p>Encouraging, enabling, and empowering every citizen of India to eliminate corruption on all levels of society.</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="about/introduction.html">About Us</a>
+            <a href="events/calendar.html">Events</a>
+            <a href="committees/list.html">Committees</a>
+            <a href="blog/articles.html">Blog</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Get Involved</h4>
+            <a href="get-involved/register1.html">Join Club</a>
+            <a href="get-involved/register.html">Event Registration</a>
+            <a href="get-involved/feedback.html">Feedback</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Contact Info</h4>
+            <p>Vellore Institute of Technology</p>
+            <p>Vellore, Tamil Nadu 632014</p>
+            <p>India</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="insta">
+          <a href="https://www.instagram.com/5pvit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="facebook">
+          <a href="https://www.facebook.com/share/1RzW5nhZNV/"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+        <div class="linkedin">
+          <a href="https://www.linkedin.com/company/5th-pillar/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 5th Pillar VIT. All rights reserved. | Designed for democracy and transparency.</p>
+      </div>
+    </div>
+  </footer>
+
+    
+<!--ai-->
+<script type="module">
+	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	createChat({
+		webhookUrl: 'https://rzaheer.app.n8n.cloud/webhook/f69a3b2c-0478-4049-b89a-5368c0c1f0f4/chat'
+	});
+</script>
+
+
+
+  <script>
+    // Data for committees (populate grid)
+    const committees = [
+      {
+        name: "Operations Committee",
+        description: "Handles administration, compliance, documentation, and cross-committee coordination.",
+        president: "A. Sharma", presidenId: "OP-001",
+        vp: "K. Rao", vpId: "OP-002",
+        advisor: "Prof. R. Menon", advisorId: "OP-ADV",
+        activities: [
+          "Policy and documentation reviews",
+          "Inter-committee coordination",
+          "Process audits and feedback loops"
+        ]
+      },
+      {
+        name: "Events Committee",
+        description: "Plans, executes, and evaluates events including hackathons, workshops, and talks.",
+        president: "M. Gupta", presidenId: "EV-001",
+        vp: "S. Das", vpId: "EV-002",
+        advisor: "Prof. P. Singh", advisorId: "EV-ADV",
+        activities: [
+          "Event roadmaps and logistics",
+          "Speaker and venue management",
+          "Post-event reports and highlights"
+        ]
+      },
+      {
+        name: "Outreach Committee",
+        description: "Leads community projects, partnerships, and alumni engagement initiatives.",
+        president: "N. Iyer", presidenId: "OR-001",
+        vp: "V. Kannan", vpId: "OR-002",
+        advisor: "Prof. S. Rao", advisorId: "OR-ADV",
+        activities: [
+          "Partnership proposals and MOUs",
+          "Alumni networking",
+          "Community-facing projects"
+        ]
+      },
+      {
+        name: "Media & Tech Committee",
+        description: "Manages digital content, web, and technical support for club initiatives.",
+        president: "R. Verma", presidenId: "MT-001",
+        vp: "D. Kumar", vpId: "MT-002",
+        advisor: "Prof. A. Thomas", advisorId: "MT-ADV",
+        activities: [
+          "Website maintenance and content updates",
+          "Design, branding, and video",
+          "Tech support and analytics"
+        ]
+      }
+    ];
+
+    const grid = document.getElementById("committeeGrid");
+    committees.forEach(c => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <div class="card-title">${c.name}</div>
+        <div class="card-description">${c.description}</div>
+        <div class="grid grid-2">
+          <div>
+            <div class="section-title">Leadership Team</div>
+            <div class="role-box">
+              <div><span>President</span><p>${c.president}</p></div>
+              <div class="badge-id">${c.presidenId}</div>
+            </div>
+            <div class="role-box">
+              <div><span>Vice President</span><p>${c.vp}</p></div>
+              <div class="badge-id">${c.vpId}</div>
+            </div>
+            <div class="role-box">
+              <div><span>Hon Advisor</span><p>${c.advisor}</p></div>
+              <div class="badge-id">${c.advisorId}</div>
+            </div>
+          </div>
+          <div>
+            <div class="section-title">Key Activities</div>
+            <ul class="activity-list">
+              ${c.activities.map(a => `<li>${a}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    // Responsive menu logic
+    const menu = document.getElementById('primaryMenu');
+    const openBtn = document.getElementById('menuOpen');
+    const closeBtn = document.getElementById('menuClose');
+    const dropdowns = Array.from(document.querySelectorAll('.dropdown[data-collapsible]'));
+    const mql = window.matchMedia('(max-width: 1024px)');
+
+    function openMenu(){
+      menu.classList.add('open');
+      openBtn.setAttribute('aria-expanded','true');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','true');
+      document.body.classList.add('no-scroll');
+    }
+    function closeMenu(){
+      menu.classList.remove('open');
+      openBtn.setAttribute('aria-expanded','false');
+      if (closeBtn) closeBtn.setAttribute('aria-expanded','false');
+      document.body.classList.remove('no-scroll');
+      // collapse all mobile dropdowns
+      dropdowns.forEach(d=>{
+        d.classList.remove('open');
+        const t = d.querySelector('.dropdown-toggle');
+        if (t) t.setAttribute('aria-expanded','false');
+      });
+    }
+
+    openBtn.addEventListener('click', openMenu);
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    // Close when clicking outside the panel on mobile
+    document.addEventListener('click', (e)=>{
+      if (!mql.matches) return;
+      if (!menu.classList.contains('open')) return;
+      const inside = menu.contains(e.target) || openBtn.contains(e.target);
+      if (!inside) closeMenu();
+    });
+
+    // Setup dropdown toggles: click-to-expand on mobile, hover on desktop (CSS)
+    function setupDropdowns(){
+      const isMobile = mql.matches;
+      dropdowns.forEach(drop=>{
+        const oldToggle = drop.querySelector('.dropdown-toggle');
+        if (!oldToggle) return;
+
+        // remove old listeners via clone
+        const toggle = oldToggle.cloneNode(true);
+        oldToggle.parentNode.replaceChild(toggle, oldToggle);
+
+        toggle.setAttribute('aria-expanded','false');
+        drop.classList.remove('open');
+
+        if (isMobile){
+          toggle.addEventListener('click', (e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+            const expanded = drop.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+            const arrow = toggle.querySelector('.dropdown-arrow');
+            if (arrow){ arrow.style.transform = expanded ? 'rotate(180deg)' : 'rotate(0deg)'; }
+          });
+          toggle.addEventListener('keydown', (e)=>{
+            if (e.key === 'Enter' || e.key === ' '){
+              e.preventDefault();
+              toggle.click();
+            }
+          });
+        }
+      });
+    }
+    setupDropdowns();
+    mql.addEventListener('change', ()=>{
+      if (!mql.matches){ closeMenu(); }
+      setupDropdowns();
+    });
+
+    // Close panel after navigation on mobile
+    document.querySelectorAll('.nav-menu a, .nav-menu button.dropdown-toggle').forEach(el=>{
+      el.addEventListener('click', ()=>{
+        if (mql.matches && menu.classList.contains('open')){
+          if (el.tagName.toLowerCase() === 'a') closeMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
