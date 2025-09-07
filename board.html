@@ -129,7 +129,10 @@
 
     /* Page content */
     .mainc{background:#a3c6ea;margin:10% 0}
-    @media (max-width:991px){ .mainc{ margin-top:15% } }
+    @media (min-width:767px ) and (max-width:991px){ .mainc{ margin-top:15% } 
+							  .cards{
+								  display:grid;grid-template-columns:repeat(2,1fr);
+							    }
     @media (max-width:599px){ .mainc{ margin-top:25% } }
 
     .us{padding:clamp(1rem,2.5vw,3rem)}
@@ -894,6 +897,7 @@ Together, we strive to build a nation founded on truth and justice.
   </script>
 </body>
 </html>
+
 
 
 
